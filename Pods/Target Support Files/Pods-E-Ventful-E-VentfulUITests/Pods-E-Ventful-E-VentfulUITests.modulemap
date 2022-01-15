@@ -1,0 +1,6 @@
+framework module Pods_E_Ventful_E_VentfulUITests {
+  umbrella header "Pods-E-Ventful-E-VentfulUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
