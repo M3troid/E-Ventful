@@ -7,19 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2022A253E9E262637F48F3C5 /* Pods_E_VentfulTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84146DA47232296C4B2D6518 /* Pods_E_VentfulTests.framework */; };
-		BB1D46CDDB177F1D30224EEC /* Pods_E_Ventful.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 857A64665341B84EE7FAD762 /* Pods_E_Ventful.framework */; };
+		5F994DAE8B9F5833E55507F0 /* Pods_E_VentfulTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 777A08526B25E097CC8D9E1A /* Pods_E_VentfulTests.framework */; };
+		7B150FC86B2FB9C014FD5542 /* Pods_E_Ventful_E_VentfulUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC8E4C06248C6D6C5012AFC /* Pods_E_Ventful_E_VentfulUITests.framework */; };
+		8CCAF59683E06FC75719FA5B /* Pods_E_Ventful.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA95802006F5FF28F2E977C /* Pods_E_Ventful.framework */; };
 		C0A4E17A279295BA00177CE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A4E179279295BA00177CE0 /* AppDelegate.swift */; };
 		C0A4E17C279295BA00177CE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A4E17B279295BA00177CE0 /* SceneDelegate.swift */; };
-		C0A4E17E279295BA00177CE0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A4E17D279295BA00177CE0 /* ViewController.swift */; };
 		C0A4E181279295BA00177CE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A4E17F279295BA00177CE0 /* Main.storyboard */; };
 		C0A4E183279295BB00177CE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0A4E182279295BB00177CE0 /* Assets.xcassets */; };
 		C0A4E186279295BB00177CE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A4E184279295BB00177CE0 /* LaunchScreen.storyboard */; };
 		C0A4E191279295BC00177CE0 /* E_VentfulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A4E190279295BC00177CE0 /* E_VentfulTests.swift */; };
 		C0A4E19B279295BC00177CE0 /* E_VentfulUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A4E19A279295BC00177CE0 /* E_VentfulUITests.swift */; };
 		C0A4E19D279295BC00177CE0 /* E_VentfulUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A4E19C279295BC00177CE0 /* E_VentfulUITestsLaunchTests.swift */; };
-		C0A4E1AC2792A01800177CE0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0A4E1AB2792A01800177CE0 /* GoogleService-Info.plist */; };
-		F257EEC99EF1BF940A11822F /* Pods_E_Ventful_E_VentfulUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 669DC28499C5C7F53A0EEB3B /* Pods_E_Ventful_E_VentfulUITests.framework */; };
+		C0C9E20027952DEF00B932B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9E1FF27952DEF00B932B2 /* LoginViewController.swift */; };
+		C0C9E20227952E4700B932B2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9E20127952E4700B932B2 /* SignUpViewController.swift */; };
+		C0DEBD2C279552250010DD1B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0DEBD2B279552250010DD1B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,18 +41,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C7E7B2043903E915D58FC10 /* Pods-E-VentfulTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-VentfulTests.release.xcconfig"; path = "Target Support Files/Pods-E-VentfulTests/Pods-E-VentfulTests.release.xcconfig"; sourceTree = "<group>"; };
-		2F4EB9C7E14F849B268BB8B4 /* Pods-E-Ventful-E-VentfulUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-Ventful-E-VentfulUITests.debug.xcconfig"; path = "Target Support Files/Pods-E-Ventful-E-VentfulUITests/Pods-E-Ventful-E-VentfulUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		3247208D2861F5544C51B045 /* Pods-E-VentfulTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-VentfulTests.debug.xcconfig"; path = "Target Support Files/Pods-E-VentfulTests/Pods-E-VentfulTests.debug.xcconfig"; sourceTree = "<group>"; };
-		669DC28499C5C7F53A0EEB3B /* Pods_E_Ventful_E_VentfulUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_Ventful_E_VentfulUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7928A4FCC1BF6F075E6145B4 /* Pods-E-Ventful.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-Ventful.release.xcconfig"; path = "Target Support Files/Pods-E-Ventful/Pods-E-Ventful.release.xcconfig"; sourceTree = "<group>"; };
-		84146DA47232296C4B2D6518 /* Pods_E_VentfulTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_VentfulTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		857A64665341B84EE7FAD762 /* Pods_E_Ventful.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_Ventful.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A8754318AFA3AA7FFEC9D67D /* Pods-E-Ventful.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-Ventful.debug.xcconfig"; path = "Target Support Files/Pods-E-Ventful/Pods-E-Ventful.debug.xcconfig"; sourceTree = "<group>"; };
+		1BC8E4C06248C6D6C5012AFC /* Pods_E_Ventful_E_VentfulUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_Ventful_E_VentfulUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D3A9B4FB21B834C4BA18990 /* Pods-E-Ventful-E-VentfulUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-Ventful-E-VentfulUITests.debug.xcconfig"; path = "Target Support Files/Pods-E-Ventful-E-VentfulUITests/Pods-E-Ventful-E-VentfulUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		777A08526B25E097CC8D9E1A /* Pods_E_VentfulTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_VentfulTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EA95802006F5FF28F2E977C /* Pods_E_Ventful.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_E_Ventful.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8BFBD6C633FE33279D06CF4A /* Pods-E-VentfulTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-VentfulTests.release.xcconfig"; path = "Target Support Files/Pods-E-VentfulTests/Pods-E-VentfulTests.release.xcconfig"; sourceTree = "<group>"; };
+		A418B1DF200DA2589AE83A00 /* Pods-E-Ventful.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-Ventful.release.xcconfig"; path = "Target Support Files/Pods-E-Ventful/Pods-E-Ventful.release.xcconfig"; sourceTree = "<group>"; };
+		B7EA2F752CE95611A18F2843 /* Pods-E-VentfulTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-VentfulTests.debug.xcconfig"; path = "Target Support Files/Pods-E-VentfulTests/Pods-E-VentfulTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C0A4E176279295BA00177CE0 /* E-Ventful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-Ventful.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A4E179279295BA00177CE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0A4E17B279295BA00177CE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C0A4E17D279295BA00177CE0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C0A4E180279295BA00177CE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C0A4E182279295BB00177CE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0A4E185279295BB00177CE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,8 +60,12 @@
 		C0A4E196279295BC00177CE0 /* E-VentfulUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "E-VentfulUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A4E19A279295BC00177CE0 /* E_VentfulUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_VentfulUITests.swift; sourceTree = "<group>"; };
 		C0A4E19C279295BC00177CE0 /* E_VentfulUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_VentfulUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		C0A4E1AB2792A01800177CE0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		C2AB0947A8FFF08482E4C261 /* Pods-E-Ventful-E-VentfulUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-Ventful-E-VentfulUITests.release.xcconfig"; path = "Target Support Files/Pods-E-Ventful-E-VentfulUITests/Pods-E-Ventful-E-VentfulUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C0C9E1F527952B9400B932B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		C0C9E1FF27952DEF00B932B2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		C0C9E20127952E4700B932B2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		C0DEBD2B279552250010DD1B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		CD69BCA510753E4E59C76223 /* Pods-E-Ventful-E-VentfulUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-Ventful-E-VentfulUITests.release.xcconfig"; path = "Target Support Files/Pods-E-Ventful-E-VentfulUITests/Pods-E-Ventful-E-VentfulUITests.release.xcconfig"; sourceTree = "<group>"; };
+		FC3132B4BA35EFFC5D3E4995 /* Pods-E-Ventful.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-Ventful.debug.xcconfig"; path = "Target Support Files/Pods-E-Ventful/Pods-E-Ventful.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BB1D46CDDB177F1D30224EEC /* Pods_E_Ventful.framework in Frameworks */,
+				8CCAF59683E06FC75719FA5B /* Pods_E_Ventful.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2022A253E9E262637F48F3C5 /* Pods_E_VentfulTests.framework in Frameworks */,
+				5F994DAE8B9F5833E55507F0 /* Pods_E_VentfulTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,32 +89,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F257EEC99EF1BF940A11822F /* Pods_E_Ventful_E_VentfulUITests.framework in Frameworks */,
+				7B150FC86B2FB9C014FD5542 /* Pods_E_Ventful_E_VentfulUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6AE92EDE5C6E09A370BFE25D /* Pods */ = {
+		3E6BEA5CD1C2A0F7F2D7142E /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A8754318AFA3AA7FFEC9D67D /* Pods-E-Ventful.debug.xcconfig */,
-				7928A4FCC1BF6F075E6145B4 /* Pods-E-Ventful.release.xcconfig */,
-				2F4EB9C7E14F849B268BB8B4 /* Pods-E-Ventful-E-VentfulUITests.debug.xcconfig */,
-				C2AB0947A8FFF08482E4C261 /* Pods-E-Ventful-E-VentfulUITests.release.xcconfig */,
-				3247208D2861F5544C51B045 /* Pods-E-VentfulTests.debug.xcconfig */,
-				0C7E7B2043903E915D58FC10 /* Pods-E-VentfulTests.release.xcconfig */,
+				FC3132B4BA35EFFC5D3E4995 /* Pods-E-Ventful.debug.xcconfig */,
+				A418B1DF200DA2589AE83A00 /* Pods-E-Ventful.release.xcconfig */,
+				5D3A9B4FB21B834C4BA18990 /* Pods-E-Ventful-E-VentfulUITests.debug.xcconfig */,
+				CD69BCA510753E4E59C76223 /* Pods-E-Ventful-E-VentfulUITests.release.xcconfig */,
+				B7EA2F752CE95611A18F2843 /* Pods-E-VentfulTests.debug.xcconfig */,
+				8BFBD6C633FE33279D06CF4A /* Pods-E-VentfulTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		B85E7EFD3447D58FF6EFD1CF /* Frameworks */ = {
+		4C8B4E092E5B88BDB1BED968 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				857A64665341B84EE7FAD762 /* Pods_E_Ventful.framework */,
-				669DC28499C5C7F53A0EEB3B /* Pods_E_Ventful_E_VentfulUITests.framework */,
-				84146DA47232296C4B2D6518 /* Pods_E_VentfulTests.framework */,
+				7EA95802006F5FF28F2E977C /* Pods_E_Ventful.framework */,
+				1BC8E4C06248C6D6C5012AFC /* Pods_E_Ventful_E_VentfulUITests.framework */,
+				777A08526B25E097CC8D9E1A /* Pods_E_VentfulTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -123,8 +126,8 @@
 				C0A4E18F279295BC00177CE0 /* E-VentfulTests */,
 				C0A4E199279295BC00177CE0 /* E-VentfulUITests */,
 				C0A4E177279295BA00177CE0 /* Products */,
-				6AE92EDE5C6E09A370BFE25D /* Pods */,
-				B85E7EFD3447D58FF6EFD1CF /* Frameworks */,
+				3E6BEA5CD1C2A0F7F2D7142E /* Pods */,
+				4C8B4E092E5B88BDB1BED968 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,11 +146,12 @@
 			children = (
 				C0A4E179279295BA00177CE0 /* AppDelegate.swift */,
 				C0A4E17B279295BA00177CE0 /* SceneDelegate.swift */,
-				C0A4E17D279295BA00177CE0 /* ViewController.swift */,
+				C0C9E1FF27952DEF00B932B2 /* LoginViewController.swift */,
+				C0C9E20127952E4700B932B2 /* SignUpViewController.swift */,
 				C0A4E17F279295BA00177CE0 /* Main.storyboard */,
 				C0A4E182279295BB00177CE0 /* Assets.xcassets */,
 				C0A4E184279295BB00177CE0 /* LaunchScreen.storyboard */,
-				C0A4E1AB2792A01800177CE0 /* GoogleService-Info.plist */,
+				C0DEBD2B279552250010DD1B /* GoogleService-Info.plist */,
 				C0A4E187279295BB00177CE0 /* Info.plist */,
 			);
 			path = "E-Ventful";
@@ -188,6 +192,8 @@
 			dependencies = (
 			);
 			name = "E-Ventful";
+			packageProductDependencies = (
+			);
 			productName = "E-Ventful";
 			productReference = C0A4E176279295BA00177CE0 /* E-Ventful.app */;
 			productType = "com.apple.product-type.application";
@@ -263,6 +269,8 @@
 				Base,
 			);
 			mainGroup = C0A4E16D279295BA00177CE0;
+			packageReferences = (
+			);
 			productRefGroup = C0A4E177279295BA00177CE0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -280,7 +288,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C0A4E186279295BB00177CE0 /* LaunchScreen.storyboard in Resources */,
-				C0A4E1AC2792A01800177CE0 /* GoogleService-Info.plist in Resources */,
+				C0DEBD2C279552250010DD1B /* GoogleService-Info.plist in Resources */,
 				C0A4E183279295BB00177CE0 /* Assets.xcassets in Resources */,
 				C0A4E181279295BA00177CE0 /* Main.storyboard in Resources */,
 			);
@@ -410,8 +418,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0A4E17E279295BA00177CE0 /* ViewController.swift in Sources */,
+				C0C9E20027952DEF00B932B2 /* LoginViewController.swift in Sources */,
 				C0A4E17A279295BA00177CE0 /* AppDelegate.swift in Sources */,
+				C0C9E20227952E4700B932B2 /* SignUpViewController.swift in Sources */,
 				C0A4E17C279295BA00177CE0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -453,6 +462,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				C0A4E180279295BA00177CE0 /* Base */,
+				C0C9E1F527952B9400B932B2 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -586,7 +596,7 @@
 		};
 		C0A4E1A1279295BC00177CE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A8754318AFA3AA7FFEC9D67D /* Pods-E-Ventful.debug.xcconfig */;
+			baseConfigurationReference = FC3132B4BA35EFFC5D3E4995 /* Pods-E-Ventful.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -614,7 +624,7 @@
 		};
 		C0A4E1A2279295BC00177CE0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7928A4FCC1BF6F075E6145B4 /* Pods-E-Ventful.release.xcconfig */;
+			baseConfigurationReference = A418B1DF200DA2589AE83A00 /* Pods-E-Ventful.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -642,7 +652,7 @@
 		};
 		C0A4E1A4279295BC00177CE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3247208D2861F5544C51B045 /* Pods-E-VentfulTests.debug.xcconfig */;
+			baseConfigurationReference = B7EA2F752CE95611A18F2843 /* Pods-E-VentfulTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -667,7 +677,7 @@
 		};
 		C0A4E1A5279295BC00177CE0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C7E7B2043903E915D58FC10 /* Pods-E-VentfulTests.release.xcconfig */;
+			baseConfigurationReference = 8BFBD6C633FE33279D06CF4A /* Pods-E-VentfulTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -692,7 +702,7 @@
 		};
 		C0A4E1A7279295BC00177CE0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F4EB9C7E14F849B268BB8B4 /* Pods-E-Ventful-E-VentfulUITests.debug.xcconfig */;
+			baseConfigurationReference = 5D3A9B4FB21B834C4BA18990 /* Pods-E-Ventful-E-VentfulUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -715,7 +725,7 @@
 		};
 		C0A4E1A8279295BC00177CE0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C2AB0947A8FFF08482E4C261 /* Pods-E-Ventful-E-VentfulUITests.release.xcconfig */;
+			baseConfigurationReference = CD69BCA510753E4E59C76223 /* Pods-E-Ventful-E-VentfulUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

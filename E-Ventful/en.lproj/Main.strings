@@ -1,0 +1,36 @@
+
+/* Class = "UIButton"; configuration.title = "Already Have An Account? Login"; ObjectID = "6rZ-gF-BwD"; */
+"6rZ-gF-BwD.configuration.title" = "Already Have An Account? Login";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "6rZ-gF-BwD"; */
+"6rZ-gF-BwD.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Password:"; ObjectID = "H44-w3-NwO"; */
+"H44-w3-NwO.placeholder" = "Password:";
+
+/* Class = "UIButton"; configuration.title = "Create Account"; ObjectID = "Wvr-aH-Jrs"; */
+"Wvr-aH-Jrs.configuration.title" = "Create Account";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Wvr-aH-Jrs"; */
+"Wvr-aH-Jrs.normalTitle" = "Button";
+
+/* Class = "UITextField"; placeholder = "Email:"; ObjectID = "cVS-ma-YRc"; */
+"cVS-ma-YRc.placeholder" = "Email:";
+
+/* Class = "UITextField"; placeholder = "Password:"; ObjectID = "lIA-kS-KC2"; */
+"lIA-kS-KC2.placeholder" = "Password:";
+
+/* Class = "UITextField"; placeholder = "Email:"; ObjectID = "n7U-28-m1e"; */
+"n7U-28-m1e.placeholder" = "Email:";
+
+/* Class = "UIButton"; configuration.title = "Sign Up"; ObjectID = "r3Z-wX-xFm"; */
+"r3Z-wX-xFm.configuration.title" = "Sign Up";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "r3Z-wX-xFm"; */
+"r3Z-wX-xFm.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Sign In"; ObjectID = "yOM-aH-fk4"; */
+"yOM-aH-fk4.configuration.title" = "Sign In";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "yOM-aH-fk4"; */
+"yOM-aH-fk4.normalTitle" = "Button";
