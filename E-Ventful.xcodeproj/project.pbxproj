@@ -11,6 +11,7 @@
 		7B150FC86B2FB9C014FD5542 /* Pods_E_Ventful_E_VentfulUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BC8E4C06248C6D6C5012AFC /* Pods_E_Ventful_E_VentfulUITests.framework */; };
 		8CCAF59683E06FC75719FA5B /* Pods_E_Ventful.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA95802006F5FF28F2E977C /* Pods_E_Ventful.framework */; };
 		C01BE1392798663F00241A2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BE1382798663F00241A2C /* HomeViewController.swift */; };
+		C09094CF27A35218004CA78E /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09094CE27A35218004CA78E /* AddEventViewController.swift */; };
 		C0A4E17A279295BA00177CE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A4E179279295BA00177CE0 /* AppDelegate.swift */; };
 		C0A4E17C279295BA00177CE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A4E17B279295BA00177CE0 /* SceneDelegate.swift */; };
 		C0A4E181279295BA00177CE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A4E17F279295BA00177CE0 /* Main.storyboard */; };
@@ -50,6 +51,7 @@
 		A418B1DF200DA2589AE83A00 /* Pods-E-Ventful.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-Ventful.release.xcconfig"; path = "Target Support Files/Pods-E-Ventful/Pods-E-Ventful.release.xcconfig"; sourceTree = "<group>"; };
 		B7EA2F752CE95611A18F2843 /* Pods-E-VentfulTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-E-VentfulTests.debug.xcconfig"; path = "Target Support Files/Pods-E-VentfulTests/Pods-E-VentfulTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C01BE1382798663F00241A2C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C09094CE27A35218004CA78E /* AddEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddEventViewController.swift; path = "/Users/drakeneuenschwander/Documents/E-Ventful/E-Ventful/AddEventViewController.swift"; sourceTree = "<absolute>"; };
 		C0A4E176279295BA00177CE0 /* E-Ventful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-Ventful.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A4E179279295BA00177CE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0A4E17B279295BA00177CE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				C0A4E179279295BA00177CE0 /* AppDelegate.swift */,
+				C09094CE27A35218004CA78E /* AddEventViewController.swift */,
 				C0A4E17B279295BA00177CE0 /* SceneDelegate.swift */,
 				C01BE1382798663F00241A2C /* HomeViewController.swift */,
 				C0C9E1FF27952DEF00B932B2 /* LoginViewController.swift */,
@@ -422,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C01BE1392798663F00241A2C /* HomeViewController.swift in Sources */,
+				C09094CF27A35218004CA78E /* AddEventViewController.swift in Sources */,
 				C0C9E20027952DEF00B932B2 /* LoginViewController.swift in Sources */,
 				C0A4E17A279295BA00177CE0 /* AppDelegate.swift in Sources */,
 				C0C9E20227952E4700B932B2 /* SignUpViewController.swift in Sources */,
@@ -606,6 +610,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XT6Z4XSMDS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "E-Ventful/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -634,6 +639,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XT6Z4XSMDS;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "E-Ventful/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
