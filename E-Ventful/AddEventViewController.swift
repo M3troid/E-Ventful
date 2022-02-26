@@ -11,6 +11,9 @@ class AddEventViewController: UIViewController {
 
     
     
+    @IBOutlet weak var scrollerView: UIScrollView!
+    @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var fromDateTxt: UITextField!
     @IBOutlet weak var toDate: UITextField!
     var toolBar = UIToolbar()
@@ -19,10 +22,13 @@ class AddEventViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
+        
+        // Do any additional setup after loading the view.
+        datePicker.preferredDatePickerStyle = .wheels
         fromDateTxt.inputView = datePicker
         toDate.inputView = datePicker
+        
         
         toolBar.sizeToFit()
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTapped))
@@ -36,7 +42,7 @@ class AddEventViewController: UIViewController {
     
     func createDatePickerView(_ textField: UITextField){
         
-        datePicker.preferredDatePickerStyle = .wheels
+        
         
         if textField == fromDateTxt
             {
