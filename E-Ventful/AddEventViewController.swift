@@ -6,11 +6,17 @@
 //
 
 import UIKit
+import SwiftUI
 
-class AddEventViewController: UIViewController {
 
+class AddEventViewController: UIViewController{
     
-    @IBOutlet weak var miniEventDate: UITextField!
+    
+    //variables for this view controller.
+    
+    @IBOutlet weak var tbl_height: NSLayoutConstraint!
+    @IBOutlet weak var tbl_view: UITableView!
+    @IBOutlet weak var addBtn: UIButton!
     @IBOutlet weak var startTimeTxt: UITextField!
     @IBOutlet weak var activityTxt: UITextField!
     @IBOutlet weak var scrollerView: UIScrollView!
@@ -23,12 +29,15 @@ class AddEventViewController: UIViewController {
     var activityPicker = UIPickerView()
     let datePicker = UIDatePicker()
     let miniEvent = ["Activity","Meeting","Meal"]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        //custom textbox file for the custom picker this allows for the text to be saved as a data source.
         activityTxt.inputView = activityPicker
         
+        //Custom picker allowing delegation of this file and the data in this file.
         activityPicker.delegate = self
         activityPicker.dataSource = self
         
@@ -39,7 +48,7 @@ class AddEventViewController: UIViewController {
         toDate.inputView = datePicker
         startTimeTxt.inputView = datePicker
         
-        
+        // Universal done button for all wheel options
         toolBar.sizeToFit()
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(doneButtonTapped))
         toolBar.setItems([doneButton] , animated: true)
@@ -48,9 +57,30 @@ class AddEventViewController: UIViewController {
         activityTxt.inputAccessoryView = toolBar
         startTimeTxt.inputAccessoryView = toolBar
         
-      
+        
         }
+    var selectionEvent: [String] = []
+    var selectionTime: [String] = []
     
+    @IBAction func addBtn(_ sender: UIButton) {
+
+        if let item = activityTxt.text, item.isEmpty == false { // need to make sure we have something here
+            selectionEvent.append(item) // store it in our data holder
+        }
+        activityTxt.text = nil // clean the textfield input
+        
+        if let item = startTimeTxt.text, item.isEmpty == false { // need to make sure we have something here
+            selectionTime.append(item) // store it in our data holder
+        }
+        startTimeTxt.text = nil // clean the textfield input
+        
+        for product in selectionTime {
+            print(product)
+        }
+        for product in selectionEvent {
+            print(product)
+                }
+    }
     func createDatePickerView(_ textField: UITextField){
         
         if textField == fromDateTxt
@@ -85,10 +115,9 @@ class AddEventViewController: UIViewController {
         
         self.view.endEditing(true)
     }
-
 }
 
-extension AddEventViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+extension AddEventViewController: UIPickerViewDataSource, UIPickerViewDelegate, UITableViewDelegate, UITableViewDataSource{
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -105,4 +134,26 @@ extension AddEventViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         return activityTxt.text = miniEvent[row]
     }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "TestCell", for: indexPath) as? TestCell
+        {
+            cell.timeTxt.text = "Test Test Test \(indexPath.row)"
+            return cell
+        }
+        return UITableViewCell()
+    }
+
+    
 }
