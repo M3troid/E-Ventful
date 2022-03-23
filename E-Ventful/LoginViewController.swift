@@ -46,7 +46,7 @@ class LoginViewController: UIViewController {
     
     func login() {
         Auth.auth().signIn(withEmail: email.text!, password: password.text!) { [weak self] authResult, err in
-            guard let strongSelf = self else {return}
+            guard self != nil else {return}
             if let err = err {
                 print(err.localizedDescription)
             }
@@ -57,7 +57,7 @@ class LoginViewController: UIViewController {
     
     func checkUserInfo() {
         if Auth.auth().currentUser != nil {
-            print(Auth.auth().currentUser?.uid)
+            print(Auth.auth().currentUser?.uid ?? "error")
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(identifier: "mainHome")
             vc.modalPresentationStyle = .overFullScreen

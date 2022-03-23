@@ -9,14 +9,13 @@ import UIKit
 import SwiftUI
 
 
-class AddEventViewController: UIViewController{
+class AddEventViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
     
-    //variables for this view controller.
     
-    @IBOutlet weak var tbl_height: NSLayoutConstraint!
+    //variables for this view controller
+   
     @IBOutlet weak var tbl_view: UITableView!
-    @IBOutlet weak var addBtn: UIButton!
     @IBOutlet weak var startTimeTxt: UITextField!
     @IBOutlet weak var activityTxt: UITextField!
     @IBOutlet weak var scrollerView: UIScrollView!
@@ -29,10 +28,15 @@ class AddEventViewController: UIViewController{
     var activityPicker = UIPickerView()
     let datePicker = UIDatePicker()
     let miniEvent = ["Activity","Meeting","Meal"]
-
+    var selectionEvent: [String] = []
+    var selectionTime: [String] = []
+//    let loadingQueue = OperationQueue()
+//    var loadingOperations = [IndexPath : AddEventViewController]()
     override func viewDidLoad() {
+    
         super.viewDidLoad()
         
+        //tbl_view?.prefetchDataSource = self
         
         //custom textbox file for the custom picker this allows for the text to be saved as a data source.
         activityTxt.inputView = activityPicker
@@ -59,20 +63,24 @@ class AddEventViewController: UIViewController{
         
         
         }
-    var selectionEvent: [String] = []
-    var selectionTime: [String] = []
+    //Lists for the mini event and the time.
+
     
     @IBAction func addBtn(_ sender: UIButton) {
 
         if let item = activityTxt.text, item.isEmpty == false { // need to make sure we have something here
             selectionEvent.append(item) // store it in our data holder
         }
-        activityTxt.text = nil // clean the textfield input
         
         if let item = startTimeTxt.text, item.isEmpty == false { // need to make sure we have something here
             selectionTime.append(item) // store it in our data holder
         }
+        
         startTimeTxt.text = nil // clean the textfield input
+        activityTxt.text = nil // clean the textfield input
+        
+        self.loadData()
+        
         
         for product in selectionTime {
             print(product)
@@ -81,6 +89,12 @@ class AddEventViewController: UIViewController{
             print(product)
                 }
     }
+    
+    func loadData() {
+        // code to load data from network, and refresh the interface
+        tbl_view.reloadData()
+    }
+    
     func createDatePickerView(_ textField: UITextField){
         
         if textField == fromDateTxt
@@ -117,7 +131,7 @@ class AddEventViewController: UIViewController{
     }
 }
 
-extension AddEventViewController: UIPickerViewDataSource, UIPickerViewDelegate, UITableViewDelegate, UITableViewDataSource{
+extension AddEventViewController: UIPickerViewDataSource, UIPickerViewDelegate { //UITableViewDataSourcePrefetching UITableViewDelegate, UITableViewDataSource{
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -135,25 +149,36 @@ extension AddEventViewController: UIPickerViewDataSource, UIPickerViewDelegate, 
         return activityTxt.text = miniEvent[row]
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
-    }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
+        return selectionEvent.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "TestCell", for: indexPath) as? TestCell
-        {
-            cell.timeTxt.text = "Test Test Test \(indexPath.row)"
-            return cell
+        let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "tableViewCellID")
+        
+        let activityText = selectionEvent[indexPath.row]
+        let timeText = selectionTime[indexPath.row]
+        
+        if let tableViewCell = tableViewCell as? TableViewCell {
+            tableViewCell.activityTableTxt.text = "                        " + timeText
         }
-        return UITableViewCell()
+        if let tableViewCell = tableViewCell as? TableViewCell {
+            tableViewCell.startTableTimeTxt.text = "     " + activityText
+        }
+//        let activityText = selectionEvent[indexPath.row]
+//
+//        //tableViewCell.activityTypeTxt.text = activityText
+//
+//        let timeText = selectionTime[indexPath.row]
+//
+//        tableViewCell.startTableTimeTxt.text = activityText + timeText
+//
+        return tableViewCell!
     }
+//    func tableView(_ tableView: UITableView, prefetchRowsAt indexPath: [IndexPath]) {
+//        for indexPath in indexPath {
+//            if let _ = loadingOperations[indexPath] {return}
+//            if let dataLoader = selectionTime
+//        }
+//    }
 
-    
 }
