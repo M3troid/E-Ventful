@@ -37,10 +37,10 @@ class SignUpViewController: UIViewController {
     
     
      @IBAction func alreadyHaveAccountLoginTapped(_ sender: Any) {
-         let stroyboard = UIStoryboard(name: "Main", bundle: nil)
-         let vc = storyboard?.instantiateViewController(withIdentifier: "login")
-         vc?.modalPresentationStyle = .overFullScreen
-         present(vc!, animated: true)
+         let storyboard = UIStoryboard(name: "Main", bundle: nil)
+         let vc = storyboard.instantiateViewController(withIdentifier: "login")
+         vc.modalPresentationStyle = .overFullScreen
+         present(vc, animated: true)
 }
     
     func signUP(){
@@ -50,7 +50,7 @@ class SignUpViewController: UIViewController {
                 return
             }
             
-            let stroyboard = UIStoryboard(name: "Main", bundle: nil)
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = self.storyboard?.instantiateViewController(withIdentifier: "mainHome")
             vc?.modalPresentationStyle = .overFullScreen
             self.present(vc!, animated: true)

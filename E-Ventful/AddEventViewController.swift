@@ -9,15 +9,18 @@ import UIKit
 import SwiftUI
 
 
-class AddEventViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
+class AddEventViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate{
     
     
     
     //variables for this view controller
    
+    @IBOutlet weak var tbl2_view: UITableView!
     @IBOutlet weak var tbl_view: UITableView!
     @IBOutlet weak var startTimeTxt: UITextField!
     @IBOutlet weak var activityTxt: UITextField!
+    @IBOutlet weak var nameTxt: UITextField!
+    @IBOutlet weak var phoneTxt: UITextField!
     @IBOutlet weak var scrollerView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -30,13 +33,22 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
     let miniEvent = ["Activity","Meeting","Meal"]
     var selectionEvent: [String] = []
     var selectionTime: [String] = []
+    var selectionName: [String] = []
+    var selectionNumber: [String] = []
 //    let loadingQueue = OperationQueue()
 //    var loadingOperations = [IndexPath : AddEventViewController]()
     override func viewDidLoad() {
     
         super.viewDidLoad()
         
-        //tbl_view?.prefetchDataSource = self
+        //textfield phone number format
+        phoneTxt.delegate = self
+        
+        //TableView setup
+        tbl_view.delegate = self
+        tbl2_view.delegate = self
+        tbl_view.dataSource = self
+        tbl2_view.dataSource = self
         
         //custom textbox file for the custom picker this allows for the text to be saved as a data source.
         activityTxt.inputView = activityPicker
@@ -63,8 +75,31 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
         
         
         }
-    //Lists for the mini event and the time.
+  
 
+    @IBAction func attendeeAddBtn(_ sender: Any) {
+        
+        if let item = nameTxt.text, item.isEmpty == false { // need to make sure we have something here
+            selectionName.append(item) // store it in our data holder
+        }
+        
+        if let item = phoneTxt.text, item.isEmpty == false { // need to make sure we have something here
+            selectionNumber.append(item) // store it in our data holder
+        }
+        
+        nameTxt.text = nil // clean the textfield input
+        phoneTxt.text = nil // clean the textfield input
+        
+        self.loadData2()
+        
+        
+        for product in selectionName {
+            print(product)
+        }
+        for product in selectionNumber {
+            print(product)
+                }
+    }
     
     @IBAction func addBtn(_ sender: UIButton) {
 
@@ -93,6 +128,10 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
     func loadData() {
         // code to load data from network, and refresh the interface
         tbl_view.reloadData()
+    }
+    
+    func loadData2() {
+        tbl2_view.reloadData()
     }
     
     func createDatePickerView(_ textField: UITextField){
@@ -129,9 +168,36 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
         
         self.view.endEditing(true)
     }
+    func format(with mask: String, phone: String) -> String {
+        let numbers = phone.replacingOccurrences(of: "[^0-9]", with: "", options: .regularExpression)
+        var result = ""
+        var index = numbers.startIndex // numbers iterator
+
+        // iterate over the mask characters until the iterator of numbers ends
+        for ch in mask where index < numbers.endIndex {
+            if ch == "X" {
+                // mask requires a number in this place, so take the next one
+                result.append(numbers[index])
+
+                // move numbers iterator to the next index
+                index = numbers.index(after: index)
+
+            } else {
+                result.append(ch) // just append a mask character
+            }
+        }
+        return result
+    }
 }
 
-extension AddEventViewController: UIPickerViewDataSource, UIPickerViewDelegate { //UITableViewDataSourcePrefetching UITableViewDelegate, UITableViewDataSource{
+extension AddEventViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard let text = textField.text else { return false }
+        let newString = (text as NSString).replacingCharacters(in: range, with: string)
+        textField.text = format(with: "(XXX)-XXX-XXXX", phone: newString)
+        return false
+    }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -142,43 +208,65 @@ extension AddEventViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        activityTxt.text = miniEvent[row]
         return miniEvent[row]
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         return activityTxt.text = miniEvent[row]
     }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return selectionEvent.count
+        var numberOfRow = 1
+        switch tableView {
+        case tbl_view:
+            numberOfRow = selectionEvent.count
+        case tbl2_view:
+            numberOfRow = selectionName.count
+        default:
+            print("Some things are wrong")
+        }
+        
+        return numberOfRow
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let tableViewCell = tableView.dequeueReusableCell(withIdentifier: "tableViewCellID")
-        
-        let activityText = selectionEvent[indexPath.row]
-        let timeText = selectionTime[indexPath.row]
-        
-        if let tableViewCell = tableViewCell as? TableViewCell {
-            tableViewCell.activityTableTxt.text = "                        " + timeText
-        }
-        if let tableViewCell = tableViewCell as? TableViewCell {
-            tableViewCell.startTableTimeTxt.text = "     " + activityText
-        }
-//        let activityText = selectionEvent[indexPath.row]
-//
-//        //tableViewCell.activityTypeTxt.text = activityText
-//
-//        let timeText = selectionTime[indexPath.row]
-//
-//        tableViewCell.startTableTimeTxt.text = activityText + timeText
-//
-        return tableViewCell!
-    }
-//    func tableView(_ tableView: UITableView, prefetchRowsAt indexPath: [IndexPath]) {
-//        for indexPath in indexPath {
-//            if let _ = loadingOperations[indexPath] {return}
-//            if let dataLoader = selectionTime
-//        }
-//    }
 
-}
+            var cell = UITableViewCell()
+            switch tableView {
+            case tbl_view:
+                cell = tableView.dequeueReusableCell(withIdentifier: "tbl_view", for: indexPath)
+                        let activityText = selectionEvent[indexPath.row]
+                        let timeText = selectionTime[indexPath.row]
+                
+                if let cell = cell as? TableViewCell {
+                    cell.activityTableTxt.text = "                        " + timeText
+                        }
+                if let cell = cell as? TableViewCell {
+                    cell.startTableTimeTxt.text = "     " + activityText
+                }
+            
+            case tbl2_view:
+                cell = tableView.dequeueReusableCell(withIdentifier: "tbl2_view", for: indexPath)
+                    let nameText = selectionName[indexPath.row]
+                    let phoneInt = selectionNumber[indexPath.row]
+        
+                if let cell = cell as? TableViewCell {
+                    cell.nameTableTxt.text = "       " + nameText
+                    }
+                if let cell = cell as? TableViewCell {
+                    cell.phoneTableText.text = "                          " + phoneInt
+                }
+            default:
+                print("Some things are wrong")
+                }
+            return cell
+            }
+
+    }
+
+
+

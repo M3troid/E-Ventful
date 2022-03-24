@@ -10,6 +10,9 @@ import UIKit
 
 class TableViewCell : UITableViewCell {
     
+    
+    @IBOutlet weak var nameTableTxt: UILabel!
+    @IBOutlet weak var phoneTableText: UILabel!
     @IBOutlet weak var startTableTimeTxt: UILabel!
     @IBOutlet weak var activityTableTxt: UILabel!
 }
