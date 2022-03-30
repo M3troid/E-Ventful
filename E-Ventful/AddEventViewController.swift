@@ -4,17 +4,19 @@
 //
 //  Created by Drake Neuenschwander on 1/27/22.
 //
-
+import FirebaseAuth
+import FirebaseDatabase
 import UIKit
 import SwiftUI
 
 
 class AddEventViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate{
     
-    
+    var ref: DatabaseReference!
     
     //variables for this view controller
    
+    @IBOutlet weak var eventNameTxt: UITextField!
     @IBOutlet weak var tbl2_view: UITableView!
     @IBOutlet weak var tbl_view: UITableView!
     @IBOutlet weak var startTimeTxt: UITextField!
@@ -35,11 +37,15 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
     var selectionTime: [String] = []
     var selectionName: [String] = []
     var selectionNumber: [String] = []
+    let userID = Auth.auth().currentUser?.uid
 //    let loadingQueue = OperationQueue()
 //    var loadingOperations = [IndexPath : AddEventViewController]()
     override func viewDidLoad() {
     
         super.viewDidLoad()
+        
+        // database loading
+        self.ref = Database.database().reference()
         
         //textfield phone number format
         phoneTxt.delegate = self
@@ -100,7 +106,44 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
             print(product)
                 }
     }
+
     
+    func addEvent() {
+        
+        let randomNumber = Int.random(in: 1..<2)
+        let randomID = String(randomNumber)
+        
+        self.ref.child("E-Ventful").child(userID!).child(randomID).child("Event_Name").child(eventNameTxt.text!).ref.setValue(eventNameTxt.text)
+        eventNameTxt.text = "Event Name"
+        self.ref.child("E-Ventful").child(userID!).child(randomID).child("To_Date").child(toDate.text!).ref.setValue(toDate.text)
+        toDate.text = ""
+        self.ref.child("E-Ventful").child(userID!).child(randomID).child("From_Date").child(fromDateTxt.text!).ref.setValue(fromDateTxt.text)
+        fromDateTxt.text = ""
+        self.ref.child("E-Ventful").child(userID!).child(randomID).child("miniEvent").child("activity").ref.setValue(selectionEvent)
+        selectionEvent.removeAll()
+        self.ref.child("E-Ventful").child(userID!).child(randomID).child("miniEvent").child("time").ref.setValue(selectionTime)
+        selectionTime.removeAll()
+        self.ref.child("E-Ventful").child(userID!).child(randomID).child("miniEvent").child("name").ref.setValue(selectionName)
+        selectionName.removeAll()
+        self.ref.child("E-Ventful").child(userID!).child(randomID).child("miniEvent").child("phone").ref.setValue(selectionNumber)
+        selectionNumber.removeAll()
+        
+        self.tbl2_view.reloadData()
+        self.tbl_view.reloadData()
+        
+        print(selectionName)
+        
+        print(selectionTime)
+        
+        print(selectionEvent)
+        
+        print(selectionNumber)
+        
+    }
+    
+    @IBAction func createEvent(_ sender: Any) {
+        addEvent()
+    }
     @IBAction func addBtn(_ sender: UIButton) {
 
         if let item = activityTxt.text, item.isEmpty == false { // need to make sure we have something here
