@@ -8,6 +8,8 @@ target 'E-Ventful' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
 
   # Pods for E-Ventful
 
