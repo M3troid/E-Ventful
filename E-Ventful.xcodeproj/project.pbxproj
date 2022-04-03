@@ -13,6 +13,7 @@
 		C01BE1392798663F00241A2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BE1382798663F00241A2C /* HomeViewController.swift */; };
 		C044D43927EC38E900E44D35 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C044D43827EC38E900E44D35 /* AddEventViewController.swift */; };
 		C044D44027F0C51300E44D35 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C044D43F27F0C51300E44D35 /* GoogleService-Info.plist */; };
+		C0925E0227FA46B900EC4ECF /* Model in Resources */ = {isa = PBXBuildFile; fileRef = C0925E0127FA46B900EC4ECF /* Model */; };
 		C0A4E17A279295BA00177CE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A4E179279295BA00177CE0 /* AppDelegate.swift */; };
 		C0A4E17C279295BA00177CE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A4E17B279295BA00177CE0 /* SceneDelegate.swift */; };
 		C0A4E181279295BA00177CE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A4E17F279295BA00177CE0 /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		C01BE1382798663F00241A2C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C044D43827EC38E900E44D35 /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		C044D43F27F0C51300E44D35 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C0925E0127FA46B900EC4ECF /* Model */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Model; sourceTree = "<group>"; };
 		C0A4E176279295BA00177CE0 /* E-Ventful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-Ventful.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A4E179279295BA00177CE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0A4E17B279295BA00177CE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C0925DFE27FA457200EC4ECF /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				C0B8508827E7E7B4002EF758 /* TableViewTable.swift */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		C0A4E16D279295BA00177CE0 = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +146,7 @@
 				C0A4E177279295BA00177CE0 /* Products */,
 				3E6BEA5CD1C2A0F7F2D7142E /* Pods */,
 				4C8B4E092E5B88BDB1BED968 /* Frameworks */,
+				C0925DFE27FA457200EC4ECF /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,6 +169,7 @@
 				C01BE1382798663F00241A2C /* HomeViewController.swift */,
 				C0C9E1FF27952DEF00B932B2 /* LoginViewController.swift */,
 				C0C9E20127952E4700B932B2 /* SignUpViewController.swift */,
+				C0925E0127FA46B900EC4ECF /* Model */,
 				C0CAEFD227F4A966008A6B74 /* TableViewTable.swift */,
 				C0A4E17F279295BA00177CE0 /* Main.storyboard */,
 				C0A4E182279295BB00177CE0 /* Assets.xcassets */,
@@ -298,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0925E0227FA46B900EC4ECF /* Model in Resources */,
 				C0A4E186279295BB00177CE0 /* LaunchScreen.storyboard in Resources */,
 				C044D44027F0C51300E44D35 /* GoogleService-Info.plist in Resources */,
 				C0A4E183279295BB00177CE0 /* Assets.xcassets in Resources */,

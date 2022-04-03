@@ -1,0 +1,13 @@
+version: "Apple Swift version 5.6 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)"
+options: "ecfb33573a703fc7eaba628ee94b80f5d8e57468b1e8a57788440a1d0db8d21d"
+build_start_time: [1649012330, 548024177]
+build_end_time: [1649012332, 225593090]
+inputs:
+  "/Users/drakeneuenschwander/Desktop/E-Ventful/E-Ventful/AddEventViewController.swift": [1649009847, 604587554]
+  "/Users/drakeneuenschwander/Desktop/E-Ventful/E-Ventful/AppDelegate.swift": [1649010566, 391999721]
+  "/Users/drakeneuenschwander/Desktop/E-Ventful/E-Ventful/Event.swift": [1649010265, 916512489]
+  "/Users/drakeneuenschwander/Desktop/E-Ventful/E-Ventful/HomeViewController.swift": [1649010929, 278954505]
+  "/Users/drakeneuenschwander/Desktop/E-Ventful/E-Ventful/LoginViewController.swift": [1649009847, 614194869]
+  "/Users/drakeneuenschwander/Desktop/E-Ventful/E-Ventful/SceneDelegate.swift": [1649009847, 614423513]
+  "/Users/drakeneuenschwander/Desktop/E-Ventful/E-Ventful/SignUpViewController.swift": [1649009847, 614598751]
+  "/Users/drakeneuenschwander/Desktop/E-Ventful/E-Ventful/TableViewTable.swift": [1649009847, 614902019]

@@ -1,0 +1,51 @@
+dependencies: \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsAPI/FIRInstallationsAPIService.m \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseInstallations.build/module.modulemap \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsAPI/FIRInstallationsAPIService.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Build/Products/Debug-iphonesimulator/PromisesObjC/FBLPromises.framework/Headers/FBLPromises.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/PromisesObjC.build/module.modulemap \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Build/Products/Debug-iphonesimulator/PromisesObjC/FBLPromises.framework/Headers/FBLPromise+Wrap.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Build/Products/Debug-iphonesimulator/PromisesObjC/FBLPromises.framework/Headers/FBLPromise+Validate.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Build/Products/Debug-iphonesimulator/PromisesObjC/FBLPromises.framework/Headers/FBLPromise+Timeout.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Build/Products/Debug-iphonesimulator/PromisesObjC/FBLPromises.framework/Headers/FBLPromise+Then.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Build/Products/Debug-iphonesimulator/PromisesObjC/FBLPromises.framework/Headers/FBLPromise+Testing.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Build/Products/Debug-iphonesimulator/PromisesObjC/FBLPromises.framework/Headers/FBLPromise+Retry.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Build/Products/Debug-iphonesimulator/PromisesObjC/FBLPromises.framework/Headers/FBLPromise+Reduce.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Build/Products/Debug-iphonesimulator/PromisesObjC/FBLPromises.framework/Headers/FBLPromise+Recover.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Build/Products/Debug-iphonesimulator/PromisesObjC/FBLPromises.framework/Headers/FBLPromise+Race.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Build/Products/Debug-iphonesimulator/PromisesObjC/FBLPromises.framework/Headers/FBLPromise+Do.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Build/Products/Debug-iphonesimulator/PromisesObjC/FBLPromises.framework/Headers/FBLPromise+Delay.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Build/Products/Debug-iphonesimulator/PromisesObjC/FBLPromises.framework/Headers/FBLPromise+Catch.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Build/Products/Debug-iphonesimulator/PromisesObjC/FBLPromises.framework/Headers/FBLPromise+Await.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Build/Products/Debug-iphonesimulator/PromisesObjC/FBLPromises.framework/Headers/FBLPromise+Async.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Build/Products/Debug-iphonesimulator/PromisesObjC/FBLPromises.framework/Headers/FBLPromise+Any.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Build/Products/Debug-iphonesimulator/PromisesObjC/FBLPromises.framework/Headers/FBLPromise+Always.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Build/Products/Debug-iphonesimulator/PromisesObjC/FBLPromises.framework/Headers/FBLPromiseError.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Build/Products/Debug-iphonesimulator/PromisesObjC/FBLPromises.framework/Headers/FBLPromise.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Build/Products/Debug-iphonesimulator/PromisesObjC/FBLPromises.framework/Headers/FBLPromise+All.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/Target\ Support\ Files/PromisesObjC/PromisesObjC-umbrella.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseInstallations/FirebaseCore/Sources/Private/FirebaseCoreInternal.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Build/Intermediates.noindex/Pods.build/Debug-iphonesimulator/FirebaseCore.build/module.modulemap \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRVersion.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIROptions.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FirebaseCore.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRLoggerLevel.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRConfiguration.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRApp.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/Target\ Support\ Files/FirebaseCore/FirebaseCore-umbrella.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseInstallations/FirebaseCore/Sources/Private/FIRAppInternal.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseInstallations/FirebaseCore/Sources/Private/FIRComponent.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseInstallations/FirebaseCore/Sources/Private/FIRComponentContainer.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseInstallations/FirebaseCore/Sources/Private/FIRComponentType.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseInstallations/FirebaseCore/Sources/Private/FIRDependency.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseInstallations/FirebaseCore/Sources/Private/FIRHeartbeatInfo.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseInstallations/FirebaseCore/Sources/Private/FIRLibrary.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseInstallations/FirebaseCore/Sources/Private/FIRLogger.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseInstallations/FirebaseCore/Sources/Private/FIROptionsInternal.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/Errors/FIRInstallationsErrorUtil.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/Public/FirebaseInstallations/FIRInstallationsErrors.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/Errors/FIRInstallationsHTTPError.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/FIRInstallationsLogger.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsAPI/FIRInstallationsItem+RegisterInstallationAPI.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/FIRInstallationsItem.h \
+  /Users/drakeneuenschwander/Desktop/E-Ventful/Pods/FirebaseInstallations/FirebaseInstallations/Source/Library/InstallationsIDController/FIRInstallationsStatus.h
