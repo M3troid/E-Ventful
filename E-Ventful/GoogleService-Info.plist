@@ -13,21 +13,21 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>E-Ventfuol</string>
+	<string>Senior-Project.E-Ventful</string>
 	<key>PROJECT_ID</key>
 	<string>e-ventful-b0939</string>
 	<key>STORAGE_BUCKET</key>
 	<string>e-ventful-b0939.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:20635222745:ios:477d8837ddbd486f44b4c8</string>
 	<key>DATABASE_URL</key>
