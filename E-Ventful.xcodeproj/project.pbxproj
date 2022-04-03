@@ -13,6 +13,8 @@
 		C01BE1392798663F00241A2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BE1382798663F00241A2C /* HomeViewController.swift */; };
 		C044D43927EC38E900E44D35 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C044D43827EC38E900E44D35 /* AddEventViewController.swift */; };
 		C044D44027F0C51300E44D35 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C044D43F27F0C51300E44D35 /* GoogleService-Info.plist */; };
+		C092B6B427FA5D3000D96EDD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C092B6B327FA5D3000D96EDD /* Event.swift */; };
+		C092B6B627FA5D3700D96EDD /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C092B6B527FA5D3700D96EDD /* UserViewModel.swift */; };
 		C0A4E17A279295BA00177CE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A4E179279295BA00177CE0 /* AppDelegate.swift */; };
 		C0A4E17C279295BA00177CE0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A4E17B279295BA00177CE0 /* SceneDelegate.swift */; };
 		C0A4E181279295BA00177CE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A4E17F279295BA00177CE0 /* Main.storyboard */; };
@@ -54,6 +56,8 @@
 		C01BE1382798663F00241A2C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C044D43827EC38E900E44D35 /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		C044D43F27F0C51300E44D35 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C092B6B327FA5D3000D96EDD /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		C092B6B527FA5D3700D96EDD /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		C0A4E176279295BA00177CE0 /* E-Ventful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-Ventful.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A4E179279295BA00177CE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0A4E17B279295BA00177CE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -125,6 +129,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C092B6B727FA5D4500D96EDD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C092B6B527FA5D3700D96EDD /* UserViewModel.swift */,
+				C092B6B327FA5D3000D96EDD /* Event.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		C0A4E16D279295BA00177CE0 = {
 			isa = PBXGroup;
 			children = (
@@ -156,6 +169,7 @@
 				C01BE1382798663F00241A2C /* HomeViewController.swift */,
 				C0C9E1FF27952DEF00B932B2 /* LoginViewController.swift */,
 				C0C9E20127952E4700B932B2 /* SignUpViewController.swift */,
+				C092B6B727FA5D4500D96EDD /* Model */,
 				C0CAEFD227F4A966008A6B74 /* TableViewTable.swift */,
 				C0A4E17F279295BA00177CE0 /* Main.storyboard */,
 				C0A4E182279295BB00177CE0 /* Assets.xcassets */,
@@ -427,12 +441,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C092B6B427FA5D3000D96EDD /* Event.swift in Sources */,
 				C01BE1392798663F00241A2C /* HomeViewController.swift in Sources */,
 				C044D43927EC38E900E44D35 /* AddEventViewController.swift in Sources */,
 				C0CAEFD327F4A966008A6B74 /* TableViewTable.swift in Sources */,
 				C0C9E20027952DEF00B932B2 /* LoginViewController.swift in Sources */,
 				C0A4E17A279295BA00177CE0 /* AppDelegate.swift in Sources */,
 				C0C9E20227952E4700B932B2 /* SignUpViewController.swift in Sources */,
+				C092B6B627FA5D3700D96EDD /* UserViewModel.swift in Sources */,
 				C0A4E17C279295BA00177CE0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
