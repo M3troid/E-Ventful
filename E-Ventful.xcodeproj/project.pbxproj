@@ -21,7 +21,6 @@
 		C0A4E191279295BC00177CE0 /* E_VentfulTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A4E190279295BC00177CE0 /* E_VentfulTests.swift */; };
 		C0A4E19B279295BC00177CE0 /* E_VentfulUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A4E19A279295BC00177CE0 /* E_VentfulUITests.swift */; };
 		C0A4E19D279295BC00177CE0 /* E_VentfulUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A4E19C279295BC00177CE0 /* E_VentfulUITestsLaunchTests.swift */; };
-		C0B8508927E7E7B4002EF758 /* TableViewTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B8508827E7E7B4002EF758 /* TableViewTable.swift */; };
 		C0C9E20027952DEF00B932B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9E1FF27952DEF00B932B2 /* LoginViewController.swift */; };
 		C0C9E20227952E4700B932B2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9E20127952E4700B932B2 /* SignUpViewController.swift */; };
 		C0CAEFD327F4A966008A6B74 /* TableViewTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CAEFD227F4A966008A6B74 /* TableViewTable.swift */; };
@@ -67,7 +66,6 @@
 		C0A4E196279295BC00177CE0 /* E-VentfulUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "E-VentfulUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0A4E19A279295BC00177CE0 /* E_VentfulUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_VentfulUITests.swift; sourceTree = "<group>"; };
 		C0A4E19C279295BC00177CE0 /* E_VentfulUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = E_VentfulUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		C0B8508827E7E7B4002EF758 /* TableViewTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewTable.swift; sourceTree = "<group>"; };
 		C0C9E1F527952B9400B932B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		C0C9E1FF27952DEF00B932B2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C0C9E20127952E4700B932B2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -127,14 +125,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C0925DFE27FA457200EC4ECF /* Recovered References */ = {
-			isa = PBXGroup;
-			children = (
-				C0B8508827E7E7B4002EF758 /* TableViewTable.swift */,
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
 		C0A4E16D279295BA00177CE0 = {
 			isa = PBXGroup;
 			children = (
@@ -144,7 +134,6 @@
 				C0A4E177279295BA00177CE0 /* Products */,
 				3E6BEA5CD1C2A0F7F2D7142E /* Pods */,
 				4C8B4E092E5B88BDB1BED968 /* Frameworks */,
-				C0925DFE27FA457200EC4ECF /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -441,7 +430,6 @@
 				C01BE1392798663F00241A2C /* HomeViewController.swift in Sources */,
 				C044D43927EC38E900E44D35 /* AddEventViewController.swift in Sources */,
 				C0CAEFD327F4A966008A6B74 /* TableViewTable.swift in Sources */,
-				C0B8508927E7E7B4002EF758 /* TableViewTable.swift in Sources */,
 				C0C9E20027952DEF00B932B2 /* LoginViewController.swift in Sources */,
 				C0A4E17A279295BA00177CE0 /* AppDelegate.swift in Sources */,
 				C0C9E20227952E4700B932B2 /* SignUpViewController.swift in Sources */,
