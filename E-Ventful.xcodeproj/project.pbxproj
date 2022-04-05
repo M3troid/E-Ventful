@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C00A1B5627FCCAC3004E8B9D /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00A1B5527FCCAC3004E8B9D /* WelcomeViewController.swift */; };
 		C01BE1392798663F00241A2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BE1382798663F00241A2C /* HomeViewController.swift */; };
 		C044D43927EC38E900E44D35 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C044D43827EC38E900E44D35 /* AddEventViewController.swift */; };
 		C044D44027F0C51300E44D35 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C044D43F27F0C51300E44D35 /* GoogleService-Info.plist */; };
@@ -14,7 +15,6 @@
 		C092B6B627FA5D3700D96EDD /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C092B6B527FA5D3700D96EDD /* UserViewModel.swift */; };
 		C0930B1027FBACBC003E3AB8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0930B0F27FBACBC003E3AB8 /* User.swift */; };
 		C0930B1227FBB014003E3AB8 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0930B1127FBB014003E3AB8 /* Service.swift */; };
-		C0930B1827FBE08F003E3AB8 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0930B1727FBE08F003E3AB8 /* WelcomeViewController.swift */; };
 		C0930B2027FBE847003E3AB8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C0930B1F27FBE847003E3AB8 /* FirebaseAnalytics */; };
 		C0930B2227FBE847003E3AB8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C0930B2127FBE847003E3AB8 /* FirebaseAuth */; };
 		C0930B2427FBE847003E3AB8 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = C0930B2327FBE847003E3AB8 /* FirebaseDatabase */; };
@@ -46,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C00A1B5227FC2723004E8B9D /* E-Ventful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "E-Ventful.app"; path = "/Users/drakeneuenschwander/Documents/E-Ventful/build/Debug-iphoneos/E-Ventful.app"; sourceTree = "<absolute>"; };
+		C00A1B5327FC2723004E8B9D /* E-VentfulTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "E-VentfulTests.xctest"; path = "/Users/drakeneuenschwander/Documents/E-Ventful/build/Debug-iphoneos/E-VentfulTests.xctest"; sourceTree = "<absolute>"; };
+		C00A1B5427FC2723004E8B9D /* E-VentfulUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "E-VentfulUITests.xctest"; path = "/Users/drakeneuenschwander/Documents/E-Ventful/build/Debug-iphoneos/E-VentfulUITests.xctest"; sourceTree = "<absolute>"; };
+		C00A1B5527FCCAC3004E8B9D /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		C01BE1382798663F00241A2C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C044D43827EC38E900E44D35 /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		C044D43F27F0C51300E44D35 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -53,10 +57,6 @@
 		C092B6B527FA5D3700D96EDD /* UserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		C0930B0F27FBACBC003E3AB8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		C0930B1127FBB014003E3AB8 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		C0930B1727FBE08F003E3AB8 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
-		C0930B1B27FBE798003E3AB8 /* E-Ventful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "E-Ventful.app"; path = "/Users/drakeneuenschwander/Documents/E-Ventful/build/Debug-iphoneos/E-Ventful.app"; sourceTree = "<absolute>"; };
-		C0930B1C27FBE798003E3AB8 /* E-VentfulTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "E-VentfulTests.xctest"; path = "/Users/drakeneuenschwander/Documents/E-Ventful/build/Debug-iphoneos/E-VentfulTests.xctest"; sourceTree = "<absolute>"; };
-		C0930B1D27FBE798003E3AB8 /* E-VentfulUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "E-VentfulUITests.xctest"; path = "/Users/drakeneuenschwander/Documents/E-Ventful/build/Debug-iphoneos/E-VentfulUITests.xctest"; sourceTree = "<absolute>"; };
 		C0A4E179279295BA00177CE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0A4E17B279295BA00177CE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C0A4E180279295BA00177CE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -140,7 +140,7 @@
 			children = (
 				C0C9E1FF27952DEF00B932B2 /* LoginViewController.swift */,
 				C0C9E20127952E4700B932B2 /* SignUpViewController.swift */,
-				C0930B1727FBE08F003E3AB8 /* WelcomeViewController.swift */,
+				C00A1B5527FCCAC3004E8B9D /* WelcomeViewController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -190,7 +190,7 @@
 				C0930B2327FBE847003E3AB8 /* FirebaseDatabase */,
 			);
 			productName = "E-Ventful";
-			productReference = C0930B1B27FBE798003E3AB8 /* E-Ventful.app */;
+			productReference = C00A1B5227FC2723004E8B9D /* E-Ventful.app */;
 			productType = "com.apple.product-type.application";
 		};
 		C0A4E18B279295BC00177CE0 /* E-VentfulTests */ = {
@@ -208,7 +208,7 @@
 			);
 			name = "E-VentfulTests";
 			productName = "E-VentfulTests";
-			productReference = C0930B1C27FBE798003E3AB8 /* E-VentfulTests.xctest */;
+			productReference = C00A1B5327FC2723004E8B9D /* E-VentfulTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		C0A4E195279295BC00177CE0 /* E-VentfulUITests */ = {
@@ -226,7 +226,7 @@
 			);
 			name = "E-VentfulUITests";
 			productName = "E-VentfulUITests";
-			productReference = C0930B1D27FBE798003E3AB8 /* E-VentfulUITests.xctest */;
+			productReference = C00A1B5427FC2723004E8B9D /* E-VentfulUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -317,7 +317,7 @@
 				C0C9E20227952E4700B932B2 /* SignUpViewController.swift in Sources */,
 				C092B6B627FA5D3700D96EDD /* UserViewModel.swift in Sources */,
 				C0930B1227FBB014003E3AB8 /* Service.swift in Sources */,
-				C0930B1827FBE08F003E3AB8 /* WelcomeViewController.swift in Sources */,
+				C00A1B5627FCCAC3004E8B9D /* WelcomeViewController.swift in Sources */,
 				C0930B1027FBACBC003E3AB8 /* User.swift in Sources */,
 				C0A4E17C279295BA00177CE0 /* SceneDelegate.swift in Sources */,
 			);

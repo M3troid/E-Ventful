@@ -25,6 +25,14 @@ class HomeViewController: UIViewController {//, UITableViewDelegate, UITableView
         super.viewDidLoad()
         
         testLabel.text = defaults.string(forKey: "eventName")
+        
+        let defaults = UserDefaults.standard
+        
+        Service.getUserInfo(onSuccess: {
+            self.testLabel.text = defaults.string(forKey: "eventName")
+        }) { (error) in
+            self.present(Service.createAlertController(title: "Error", message: error!.localizedDescription), animated: true, completion: nil)
+        }
 
         
     }

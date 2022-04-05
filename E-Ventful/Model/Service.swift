@@ -39,7 +39,7 @@ class Service {
                 print("User not found")
                 return
     }
-        ref.child("E-Ventful").child(uid).observe(.value, with: { (snapshot) in
+        ref.child("E-Ventful").child(uid).child("ID1").observe(.value, with: { (snapshot) in
             if let dictionary = snapshot.value as? [String : Any] {
                 let eventName = dictionary["eventName"] as! String
                 let eventFromDate = dictionary["eventFromDate"] as! String
