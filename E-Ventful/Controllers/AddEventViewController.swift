@@ -113,19 +113,19 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
         let randomNumber = Int.random(in: 1..<2)
         let randomID = String(randomNumber)
         
-        self.ref.child("E-Ventful").child(userID!).child(randomID).child("Event_Name").child(eventNameTxt.text!).ref.setValue(eventNameTxt.text)
+        self.ref.child("users").child(userID!).child(randomID).child("Events").child("Event_Name").child(eventNameTxt.text!).ref.setValue(eventNameTxt.text)
         eventNameTxt.text = "Event Name"
-        self.ref.child("E-Ventful").child(userID!).child(randomID).child("To_Date").child(toDate.text!).ref.setValue(toDate.text)
+        self.ref.child("users").child(userID!).child(randomID).child("Events").child("To_Date").child(toDate.text!).ref.setValue(toDate.text)
         toDate.text = ""
-        self.ref.child("E-Ventful").child(userID!).child(randomID).child("From_Date").child(fromDateTxt.text!).ref.setValue(fromDateTxt.text)
+        self.ref.child("users").child(userID!).child(randomID).child("Events").child("From_Date").child(fromDateTxt.text!).ref.setValue(fromDateTxt.text)
         fromDateTxt.text = ""
-        self.ref.child("E-Ventful").child(userID!).child(randomID).child("miniEvent").child("activity").ref.setValue(selectionEvent)
+        self.ref.child("users").child(userID!).child(randomID).child("Events").child("miniEvent").child("activity").ref.setValue(selectionEvent)
         selectionEvent.removeAll()
-        self.ref.child("E-Ventful").child(userID!).child(randomID).child("miniEvent").child("time").ref.setValue(selectionTime)
+        self.ref.child("users").child(userID!).child(randomID).child("Events").child("miniEvent").child("time").ref.setValue(selectionTime)
         selectionTime.removeAll()
-        self.ref.child("E-Ventful").child(userID!).child(randomID).child("miniEvent").child("name").ref.setValue(selectionName)
+        self.ref.child("users").child(userID!).child(randomID).child("Events").child("miniEvent").child("name").ref.setValue(selectionName)
         selectionName.removeAll()
-        self.ref.child("E-Ventful").child(userID!).child(randomID).child("miniEvent").child("phone").ref.setValue(selectionNumber)
+        self.ref.child("users").child(userID!).child(randomID).child("Events").child("miniEvent").child("phone").ref.setValue(selectionNumber)
         selectionNumber.removeAll()
         
         self.tbl2_view.reloadData()

@@ -1,22 +1,23 @@
 //
 //  Service.swift
-//  E-Ventful
+//  SocialNetwork
 //
-//  Created by Drake Neuenschwander on 4/4/22.
+//  Created by LzCtrl on 9/30/19.
+//  Copyright © 2019 M & P Construction, Inc. All rights reserved.
 //
 
 import UIKit
 import Firebase
 
-
 class Service {
+    
     static func signUpUser(email: String, password: String, name: String, onSuccess: @escaping () -> Void, onError: @escaping (_ error: Error?) -> Void) {
         let auth = Auth.auth()
         
         auth.createUser(withEmail: email, password: password) { (authResult, error) in
             if error != nil {
                 onError(error!)
-          
+                return
             }
             
             uploadToDatabase(email: email, name: name, onSuccess: onSuccess)
@@ -31,28 +32,32 @@ class Service {
         onSuccess()
     }
     
-    static func getUserInfo(onSuccess: @escaping () -> Void, onError: @escaping(_ error: Error?) -> Void) {
+    static func getUserInfo(onSuccess: @escaping () -> Void, onError: @escaping (_ error: Error?) -> Void) {
         let ref = Database.database().reference()
         let defaults = UserDefaults.standard
         
         guard let uid = Auth.auth().currentUser?.uid else {
-                print("User not found")
-                return
-    }
-        ref.child("E-Ventful").child(uid).child("ID1").observe(.value, with: { (snapshot) in
+            print("User not found")
+            return
+        }
+        
+        ref.child("users").child(uid).observe(.value, with: { (snapshot) in
             if let dictionary = snapshot.value as? [String : Any] {
+                let email = dictionary["email"] as! String
+                let name = dictionary["name"] as! String
                 let eventName = dictionary["eventName"] as! String
                 let eventFromDate = dictionary["eventFromDate"] as! String
                 
                 defaults.set(eventName, forKey: "eventName")
                 defaults.set(eventFromDate, forKey: "eventFromDate")
+                defaults.set(email, forKey: "userEmailKey")
+                defaults.set(name, forKey: "userNameKey")
                 
                 onSuccess()
             }
         }) { (error) in
             onError(error)
         }
-        
     }
     
     static func createAlertController(title: String, message: String) -> UIAlertController {
@@ -61,6 +66,7 @@ class Service {
         let okAction = UIAlertAction(title: "Ok", style: .default) { (action) in
             alert.dismiss(animated: true, completion: nil)
         }
+        
         alert.addAction(okAction)
         
         return alert

@@ -5,13 +5,15 @@
 //  Created by Drake Neuenschwander on 1/16/22.
 //
 
-import UIKit
+import UIKit  
 import Firebase
 
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var email: UITextField!
     @IBOutlet weak var password: UITextField!
+    
+    @IBOutlet weak var signInButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +22,6 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func signinTapped(_ sender: Any) {
-        validateFileds()
         let auth = Auth.auth()
         let defaults = UserDefaults.standard
         
@@ -28,13 +29,11 @@ class LoginViewController: UIViewController {
             if error != nil {
                 self.present(Service.createAlertController(title: "Error", message: error!.localizedDescription), animated: true, completion: nil)
                 return
-                
             }
             
             defaults.set(true, forKey: "isUserSignedIn")
             self.performSegue(withIdentifier: "userSignedInSegue", sender: nil)
         }
-        
     }
     
     @IBAction func createAccountTapped(_ sender: Any) {
@@ -42,17 +41,6 @@ class LoginViewController: UIViewController {
         let vc = storyboard.instantiateViewController(identifier: "signUp")
         vc.modalPresentationStyle = .overFullScreen
         present(vc, animated: true)
-    }
-    func validateFileds() {
-        if email.text?.isEmpty == true {
-            print("No email text")
-            return
-        }
-        if password.text?.isEmpty == true {
-            print("No password text")
-            return
-        }
-        
     }
 
 }
