@@ -38,11 +38,20 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
     var selectionName: [String] = []
     var selectionNumber: [String] = []
     let userID = Auth.auth().currentUser?.uid
-//    let loadingQueue = OperationQueue()
-//    var loadingOperations = [IndexPath : AddEventViewController]()
+
     override func viewDidLoad() {
     
         super.viewDidLoad()
+        
+//        eventNameTxt.text = "Event Name"
+//        toDate.text = ""
+//        fromDateTxt.text = ""
+//        selectionEvent.removeAll()
+//        selectionTime.removeAll()
+//        selectionName.removeAll()
+//        selectionNumber.removeAll()
+        
+        
         
         // database loading
         self.ref = Database.database().reference()
@@ -110,34 +119,36 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func addEvent() {
         
-        let randomNumber = Int.random(in: 1..<2)
-        let randomID = String(randomNumber)
         
-        self.ref.child("users").child(userID!).child(randomID).child("Events").child("Event_Name").child(eventNameTxt.text!).ref.setValue(eventNameTxt.text)
+        let eventName = eventNameTxt.text!
+        let eventFromDate = fromDateTxt.text!
+        let eventToDate = toDate.text!
+        let eventActivity = selectionEvent
+        let eventActivityTime = selectionTime
+        let attendeeName = selectionName
+        let attendeePhone = selectionNumber
+        
+        let parameters = ["eventName": eventName,
+                           "eventFromDate": eventFromDate,
+                           "eventToDate": eventToDate,
+                           "activity": eventActivity,
+                           "time": eventActivityTime,
+                           "attendeeName": attendeeName,
+                          "attendeePhone": attendeePhone] as [String : Any]
+        
+        
+        DatabaseService.shared.eventRef.child(userID!).child("Events").childByAutoId().setValue(parameters)
+        
         eventNameTxt.text = "Event Name"
-        self.ref.child("users").child(userID!).child(randomID).child("Events").child("To_Date").child(toDate.text!).ref.setValue(toDate.text)
         toDate.text = ""
-        self.ref.child("users").child(userID!).child(randomID).child("Events").child("From_Date").child(fromDateTxt.text!).ref.setValue(fromDateTxt.text)
         fromDateTxt.text = ""
-        self.ref.child("users").child(userID!).child(randomID).child("Events").child("miniEvent").child("activity").ref.setValue(selectionEvent)
         selectionEvent.removeAll()
-        self.ref.child("users").child(userID!).child(randomID).child("Events").child("miniEvent").child("time").ref.setValue(selectionTime)
         selectionTime.removeAll()
-        self.ref.child("users").child(userID!).child(randomID).child("Events").child("miniEvent").child("name").ref.setValue(selectionName)
         selectionName.removeAll()
-        self.ref.child("users").child(userID!).child(randomID).child("Events").child("miniEvent").child("phone").ref.setValue(selectionNumber)
         selectionNumber.removeAll()
         
         self.tbl2_view.reloadData()
         self.tbl_view.reloadData()
-        
-        print(selectionName)
-        
-        print(selectionTime)
-        
-        print(selectionEvent)
-        
-        print(selectionNumber)
         
     }
     

@@ -11,9 +11,11 @@
 		C01BE1392798663F00241A2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01BE1382798663F00241A2C /* HomeViewController.swift */; };
 		C044D43927EC38E900E44D35 /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C044D43827EC38E900E44D35 /* AddEventViewController.swift */; };
 		C044D44027F0C51300E44D35 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C044D43F27F0C51300E44D35 /* GoogleService-Info.plist */; };
-		C092B6B427FA5D3000D96EDD /* EventModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C092B6B327FA5D3000D96EDD /* EventModel.swift */; };
+		C04BE95A2804839400B70741 /* send_sms.rb in Resources */ = {isa = PBXBuildFile; fileRef = C04BE9592804839400B70741 /* send_sms.rb */; };
+		C078AAE528069ACC003C491C /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C078AAE428069ACC003C491C /* EventTableViewCell.swift */; };
+		C092B6B427FA5D3000D96EDD /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C092B6B327FA5D3000D96EDD /* Event.swift */; };
 		C0930B1027FBACBC003E3AB8 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0930B0F27FBACBC003E3AB8 /* User.swift */; };
-		C0930B1227FBB014003E3AB8 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0930B1127FBB014003E3AB8 /* Service.swift */; };
+		C0930B1227FBB014003E3AB8 /* UserAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0930B1127FBB014003E3AB8 /* UserAuthService.swift */; };
 		C0930B2027FBE847003E3AB8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = C0930B1F27FBE847003E3AB8 /* FirebaseAnalytics */; };
 		C0930B2227FBE847003E3AB8 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C0930B2127FBE847003E3AB8 /* FirebaseAuth */; };
 		C0930B2427FBE847003E3AB8 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = C0930B2327FBE847003E3AB8 /* FirebaseDatabase */; };
@@ -25,7 +27,7 @@
 		C0C9E20027952DEF00B932B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9E1FF27952DEF00B932B2 /* LoginViewController.swift */; };
 		C0C9E20227952E4700B932B2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9E20127952E4700B932B2 /* SignUpViewController.swift */; };
 		C0CAEFD327F4A966008A6B74 /* TableViewTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CAEFD227F4A966008A6B74 /* TableViewTable.swift */; };
-		C0CCF5C927FDD70D0074CAC3 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CCF5C827FDD70D0074CAC3 /* TableViewCell.swift */; };
+		C0CCF5CC280079990074CAC3 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CCF5CB280079990074CAC3 /* DatabaseService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +52,13 @@
 		C01BE1382798663F00241A2C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		C044D43827EC38E900E44D35 /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		C044D43F27F0C51300E44D35 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		C092B6B327FA5D3000D96EDD /* EventModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventModel.swift; sourceTree = "<group>"; };
+		C04BE957280224EA00B70741 /* E-VentfulTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "E-VentfulTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C04BE958280224EA00B70741 /* E-VentfulUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "E-VentfulUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C04BE9592804839400B70741 /* send_sms.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; name = send_sms.rb; path = "E-Ventful/send_sms.rb"; sourceTree = SOURCE_ROOT; };
+		C078AAE428069ACC003C491C /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
+		C092B6B327FA5D3000D96EDD /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		C0930B0F27FBACBC003E3AB8 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		C0930B1127FBB014003E3AB8 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		C0930B1127FBB014003E3AB8 /* UserAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthService.swift; sourceTree = "<group>"; };
 		C0A4E179279295BA00177CE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0A4E17B279295BA00177CE0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C0A4E180279295BA00177CE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,9 +70,7 @@
 		C0C9E20127952E4700B932B2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		C0CAEFD227F4A966008A6B74 /* TableViewTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewTable.swift; sourceTree = "<group>"; };
 		C0CCF5C527FD221E0074CAC3 /* E-Ventful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-Ventful.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		C0CCF5C627FD221E0074CAC3 /* E-VentfulTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "E-VentfulTests.xctest"; path = "/Users/drakeneuenschwander/Documents/E-Ventful/build/Debug-iphoneos/E-VentfulTests.xctest"; sourceTree = "<absolute>"; };
-		C0CCF5C727FD221E0074CAC3 /* E-VentfulUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "E-VentfulUITests.xctest"; path = "/Users/drakeneuenschwander/Documents/E-Ventful/build/Debug-iphoneos/E-VentfulUITests.xctest"; sourceTree = "<absolute>"; };
-		C0CCF5C827FDD70D0074CAC3 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		C0CCF5CB280079990074CAC3 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,9 +104,9 @@
 		C092B6B727FA5D4500D96EDD /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C0930B1127FBB014003E3AB8 /* Service.swift */,
-				C092B6B327FA5D3000D96EDD /* EventModel.swift */,
+				C092B6B327FA5D3000D96EDD /* Event.swift */,
 				C0930B0F27FBACBC003E3AB8 /* User.swift */,
+				C0CCF5CA27FF73F00074CAC3 /* Services */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -121,7 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				C0CAEFD227F4A966008A6B74 /* TableViewTable.swift */,
-				C0CCF5C827FDD70D0074CAC3 /* TableViewCell.swift */,
+				C078AAE428069ACC003C491C /* EventTableViewCell.swift */,
 			);
 			path = TableCells;
 			sourceTree = "<group>";
@@ -150,12 +154,15 @@
 			children = (
 				C0A4E178279295BA00177CE0 /* E-Ventful */,
 				C0CCF5C527FD221E0074CAC3 /* E-Ventful.app */,
+				C04BE957280224EA00B70741 /* E-VentfulTests.xctest */,
+				C04BE958280224EA00B70741 /* E-VentfulUITests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
 		C0A4E178279295BA00177CE0 /* E-Ventful */ = {
 			isa = PBXGroup;
 			children = (
+				C04BE9592804839400B70741 /* send_sms.rb */,
 				C0930B1527FBD5CB003E3AB8 /* AppInfo */,
 				C0930B1427FBD5B9003E3AB8 /* TableCells */,
 				C0930B1327FBD4B4003E3AB8 /* Controllers */,
@@ -167,6 +174,15 @@
 				C044D43F27F0C51300E44D35 /* GoogleService-Info.plist */,
 			);
 			path = "E-Ventful";
+			sourceTree = "<group>";
+		};
+		C0CCF5CA27FF73F00074CAC3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C0930B1127FBB014003E3AB8 /* UserAuthService.swift */,
+				C0CCF5CB280079990074CAC3 /* DatabaseService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,7 +225,7 @@
 			);
 			name = "E-VentfulTests";
 			productName = "E-VentfulTests";
-			productReference = C0CCF5C627FD221E0074CAC3 /* E-VentfulTests.xctest */;
+			productReference = C04BE957280224EA00B70741 /* E-VentfulTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		C0A4E195279295BC00177CE0 /* E-VentfulUITests */ = {
@@ -227,7 +243,7 @@
 			);
 			name = "E-VentfulUITests";
 			productName = "E-VentfulUITests";
-			productReference = C0CCF5C727FD221E0074CAC3 /* E-VentfulUITests.xctest */;
+			productReference = C04BE958280224EA00B70741 /* E-VentfulUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -285,6 +301,7 @@
 				C044D44027F0C51300E44D35 /* GoogleService-Info.plist in Resources */,
 				C0A4E183279295BB00177CE0 /* Assets.xcassets in Resources */,
 				C0A4E181279295BA00177CE0 /* Main.storyboard in Resources */,
+				C04BE95A2804839400B70741 /* send_sms.rb in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,15 +326,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0CCF5C927FDD70D0074CAC3 /* TableViewCell.swift in Sources */,
-				C092B6B427FA5D3000D96EDD /* EventModel.swift in Sources */,
+				C092B6B427FA5D3000D96EDD /* Event.swift in Sources */,
 				C01BE1392798663F00241A2C /* HomeViewController.swift in Sources */,
 				C044D43927EC38E900E44D35 /* AddEventViewController.swift in Sources */,
 				C0CAEFD327F4A966008A6B74 /* TableViewTable.swift in Sources */,
+				C078AAE528069ACC003C491C /* EventTableViewCell.swift in Sources */,
 				C0C9E20027952DEF00B932B2 /* LoginViewController.swift in Sources */,
 				C0A4E17A279295BA00177CE0 /* AppDelegate.swift in Sources */,
 				C0C9E20227952E4700B932B2 /* SignUpViewController.swift in Sources */,
-				C0930B1227FBB014003E3AB8 /* Service.swift in Sources */,
+				C0930B1227FBB014003E3AB8 /* UserAuthService.swift in Sources */,
+				C0CCF5CC280079990074CAC3 /* DatabaseService.swift in Sources */,
 				C00A1B5627FCCAC3004E8B9D /* WelcomeViewController.swift in Sources */,
 				C0930B1027FBACBC003E3AB8 /* User.swift in Sources */,
 				C0A4E17C279295BA00177CE0 /* SceneDelegate.swift in Sources */,
