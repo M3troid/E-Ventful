@@ -1,21 +1,27 @@
 //
 //  AddEventViewController.swift
-//  
+//
 //
 //  Created by Drake Neuenschwander on 1/27/22.
+// This view allows the user to easily modify their event name and the times the event was scheduled for.
 //
+
+//Imports for firebase authentication and database
 import FirebaseAuth
 import FirebaseDatabase
 import UIKit
-import SwiftUI
 
 
-class AddEventViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate{
+class ModifyEventViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate{
     
-    var ref: DatabaseReference!
     
     //variables for this view controller
-   
+    var events = [Event]()
+    var ref: DatabaseReference!
+    var eventName = String()
+    var eventDateFrom = String()
+    var eventToDate = String ()
+    var eventID = String()
     @IBOutlet weak var eventNameTxt: UITextField!
     @IBOutlet weak var tbl2_view: UITableView!
     @IBOutlet weak var tbl_view: UITableView!
@@ -23,6 +29,7 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var activityTxt: UITextField!
     @IBOutlet weak var nameTxt: UITextField!
     @IBOutlet weak var phoneTxt: UITextField!
+    @IBOutlet weak var scrollerView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var fromDateTxt: UITextField!
@@ -38,10 +45,26 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
     var selectionNumber: [String] = []
     let userID = Auth.auth().currentUser?.uid
 
+    //  this loads function before the view fully loads in or starts its everytime something is updated in the database.
     override func viewDidLoad() {
     
         super.viewDidLoad()
+    
+        eventNameTxt.text! = eventName
+        fromDateTxt.text! = eventDateFrom
+        toDate.text! = eventToDate
+        print (eventName)
+//        eventNameTxt.text = "Event Name"
+//        toDate.text = ""
+//        fromDateTxt.text = ""
+//        selectionEvent.removeAll()
+//        selectionTime.removeAll()
+//        selectionName.removeAll()
+//        selectionNumber.removeAll()
         
+        
+        
+        // database loading
         self.ref = Database.database().reference()
         
         //textfield phone number format
@@ -78,78 +101,7 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
         
         
         }
-  
-
-    @IBAction func attendeeAddBtn(_ sender: Any) {
-        
-        if let item = nameTxt.text, item.isEmpty == false { // need to make sure we have something here
-            selectionName.append(item) // store it in our data holder
-        }
-        
-        if let item = phoneTxt.text, item.isEmpty == false { // need to make sure we have something here
-            selectionNumber.append(item) // store it in our data holder
-        }
-        
-        nameTxt.text = nil // clean the textfield input
-        phoneTxt.text = nil // clean the textfield input
-        
-        self.loadData2()
-        
-        
-        for product in selectionName {
-            print(product)
-        }
-        for product in selectionNumber {
-            print(product)
-                }
-    }
-
-    
-    func addEvent() {
-        
-        
-        let eventName = eventNameTxt.text!
-        let eventFromDate = fromDateTxt.text!
-        let eventToDate = toDate.text!
-        let eventActivity = selectionEvent
-        let eventActivityTime = selectionTime
-        let attendeeName = selectionName
-        let attendeePhone = selectionNumber
-        let randomID = DatabaseService.shared.eventRef.child(userID!).child("Events").childByAutoId()
-        let parameters = ["eventName": eventName,
-                          "eventFromDate": eventFromDate,
-                          "eventToDate": eventToDate,
-                          "activity": eventActivity,
-                          "time": eventActivityTime,
-                          "attendeeName": attendeeName,
-                          "attendeePhone": attendeePhone,
-                          "randomID": randomID.key!] as [String : Any]
-        
-        DatabaseService.shared.eventRef.child(userID!).child("Events").child(randomID.key!).setValue(parameters)
-        
-        
-        
-        eventNameTxt.text = "Event Name"
-        toDate.text = ""
-        fromDateTxt.text = ""
-        selectionEvent.removeAll()
-        selectionTime.removeAll()
-        selectionName.removeAll()
-        selectionNumber.removeAll()
-        
-        self.tbl2_view.reloadData()
-        self.tbl_view.reloadData()
-        
-        
-    }
-    
-    @IBAction func dismissView(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
-    @IBAction func createEvent(_ sender: Any) {
-        addEvent()
-        dismissView((Any).self)
-    }
+    //
     @IBAction func addBtn(_ sender: UIButton) {
 
         if let item = activityTxt.text, item.isEmpty == false { // need to make sure we have something here
@@ -174,6 +126,67 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
                 }
     }
     
+  
+    // button that adds a attendent to the event.
+    @IBAction func attendeeAddBtn(_ sender: Any) {
+        
+        if let item = nameTxt.text, item.isEmpty == false { // need to make sure we have something here
+            selectionName.append(item) // store it in our data holder
+        }
+        
+        if let item = phoneTxt.text, item.isEmpty == false { // need to make sure we have something here
+            selectionNumber.append(item) // store it in our data holder
+        }
+        
+        nameTxt.text = nil // clean the textfield input
+        phoneTxt.text = nil // clean the textfield input
+        
+        self.loadData2()
+    }
+
+    //updates the event data at the  given event from the tableview.
+    func updateEvent() {
+        
+        let eventName = eventNameTxt.text!
+        let eventFromDate = fromDateTxt.text!
+        let eventToDate = toDate.text!
+        let eventActivity = selectionEvent
+        let eventActivityTime = selectionTime
+        let attendeeName = selectionName
+        let attendeePhone = selectionNumber
+        let randomID = DatabaseService.shared.eventRef.child(userID!).child("Events").child(eventID)
+        let parameters = ["eventName": eventName,
+                          "eventFromDate": eventFromDate,
+                          "eventToDate": eventToDate,
+                          "activity": eventActivity,
+                          "time": eventActivityTime,
+                          "attendeeName": attendeeName,
+                          "attendeePhone": attendeePhone,
+                          "randomID": randomID.key!] as [String : Any]
+        
+        DatabaseService.shared.eventRef.child(userID!).child("Events").child(eventID).setValue(parameters)
+        
+        eventNameTxt.text = "Event Name"
+        toDate.text = ""
+        fromDateTxt.text = ""
+        selectionEvent.removeAll()
+        selectionTime.removeAll()
+        selectionName.removeAll()
+        selectionNumber.removeAll()
+        
+        self.tbl2_view.reloadData()
+        self.tbl_view.reloadData()
+        
+    }
+    //dissmisses the view if the button is exit pressed.
+    @IBAction func dismissView(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    // this allows for the create update event function to be pressed.
+    @IBAction func updEvent(_ sender: Any) {
+        updateEvent()
+        dismissView((Any).self)
+    }
     func loadData() {
         // code to load data from network, and refresh the interface
         tbl_view.reloadData()
@@ -239,7 +252,7 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
     }
 }
 
-extension AddEventViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+extension ModifyEventViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         guard let text = textField.text else { return false }

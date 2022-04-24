@@ -24,6 +24,7 @@
 		C0A4E181279295BA00177CE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A4E17F279295BA00177CE0 /* Main.storyboard */; };
 		C0A4E183279295BB00177CE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0A4E182279295BB00177CE0 /* Assets.xcassets */; };
 		C0A4E186279295BB00177CE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C0A4E184279295BB00177CE0 /* LaunchScreen.storyboard */; };
+		C0B840B9280CBE9E00BA1B17 /* ModifyEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B840B8280CBE9E00BA1B17 /* ModifyEventViewController.swift */; };
 		C0C9E20027952DEF00B932B2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9E1FF27952DEF00B932B2 /* LoginViewController.swift */; };
 		C0C9E20227952E4700B932B2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9E20127952E4700B932B2 /* SignUpViewController.swift */; };
 		C0CAEFD327F4A966008A6B74 /* TableViewTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CAEFD227F4A966008A6B74 /* TableViewTable.swift */; };
@@ -65,6 +66,7 @@
 		C0A4E182279295BB00177CE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C0A4E185279295BB00177CE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C0A4E187279295BB00177CE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0B840B8280CBE9E00BA1B17 /* ModifyEventViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifyEventViewController.swift; sourceTree = "<group>"; };
 		C0C9E1F527952B9400B932B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		C0C9E1FF27952DEF00B932B2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		C0C9E20127952E4700B932B2 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				C044D43827EC38E900E44D35 /* AddEventViewController.swift */,
+				C0B840B8280CBE9E00BA1B17 /* ModifyEventViewController.swift */,
 				C01BE1382798663F00241A2C /* HomeViewController.swift */,
 				C0930B1627FBD739003E3AB8 /* Auth */,
 			);
@@ -330,6 +333,7 @@
 				C01BE1392798663F00241A2C /* HomeViewController.swift in Sources */,
 				C044D43927EC38E900E44D35 /* AddEventViewController.swift in Sources */,
 				C0CAEFD327F4A966008A6B74 /* TableViewTable.swift in Sources */,
+				C0B840B9280CBE9E00BA1B17 /* ModifyEventViewController.swift in Sources */,
 				C078AAE528069ACC003C491C /* EventTableViewCell.swift in Sources */,
 				C0C9E20027952DEF00B932B2 /* LoginViewController.swift in Sources */,
 				C0A4E17A279295BA00177CE0 /* AppDelegate.swift in Sources */,
@@ -443,7 +447,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -498,7 +502,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
