@@ -29,6 +29,8 @@
 		C0C9E20227952E4700B932B2 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0C9E20127952E4700B932B2 /* SignUpViewController.swift */; };
 		C0CAEFD327F4A966008A6B74 /* TableViewTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CAEFD227F4A966008A6B74 /* TableViewTable.swift */; };
 		C0CCF5CC280079990074CAC3 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CCF5CB280079990074CAC3 /* DatabaseService.swift */; };
+		C0ED39BC2819298900DF87A2 /* ProfileSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C043AC8E281842CF001FEA80 /* ProfileSettingsViewController.swift */; };
+		C0ED39BE281A190E00DF87A2 /* ForgotPassViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0ED39BD281A190E00DF87A2 /* ForgotPassViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,7 @@
 /* Begin PBXFileReference section */
 		C00A1B5527FCCAC3004E8B9D /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		C01BE1382798663F00241A2C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		C043AC8E281842CF001FEA80 /* ProfileSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSettingsViewController.swift; sourceTree = "<group>"; };
 		C044D43827EC38E900E44D35 /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
 		C044D43F27F0C51300E44D35 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C04BE957280224EA00B70741 /* E-VentfulTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "E-VentfulTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +76,7 @@
 		C0CAEFD227F4A966008A6B74 /* TableViewTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewTable.swift; sourceTree = "<group>"; };
 		C0CCF5C527FD221E0074CAC3 /* E-Ventful.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "E-Ventful.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0CCF5CB280079990074CAC3 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		C0ED39BD281A190E00DF87A2 /* ForgotPassViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPassViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,7 @@
 		C0930B1327FBD4B4003E3AB8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C043AC8E281842CF001FEA80 /* ProfileSettingsViewController.swift */,
 				C044D43827EC38E900E44D35 /* AddEventViewController.swift */,
 				C0B840B8280CBE9E00BA1B17 /* ModifyEventViewController.swift */,
 				C01BE1382798663F00241A2C /* HomeViewController.swift */,
@@ -148,6 +153,7 @@
 				C0C9E1FF27952DEF00B932B2 /* LoginViewController.swift */,
 				C0C9E20127952E4700B932B2 /* SignUpViewController.swift */,
 				C00A1B5527FCCAC3004E8B9D /* WelcomeViewController.swift */,
+				C0ED39BD281A190E00DF87A2 /* ForgotPassViewController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -329,6 +335,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0ED39BE281A190E00DF87A2 /* ForgotPassViewController.swift in Sources */,
 				C092B6B427FA5D3000D96EDD /* Event.swift in Sources */,
 				C01BE1392798663F00241A2C /* HomeViewController.swift in Sources */,
 				C044D43927EC38E900E44D35 /* AddEventViewController.swift in Sources */,
@@ -336,6 +343,7 @@
 				C0B840B9280CBE9E00BA1B17 /* ModifyEventViewController.swift in Sources */,
 				C078AAE528069ACC003C491C /* EventTableViewCell.swift in Sources */,
 				C0C9E20027952DEF00B932B2 /* LoginViewController.swift in Sources */,
+				C0ED39BC2819298900DF87A2 /* ProfileSettingsViewController.swift in Sources */,
 				C0A4E17A279295BA00177CE0 /* AppDelegate.swift in Sources */,
 				C0C9E20227952E4700B932B2 /* SignUpViewController.swift in Sources */,
 				C0930B1227FBB014003E3AB8 /* UserAuthService.swift in Sources */,

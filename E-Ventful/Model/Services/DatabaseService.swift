@@ -18,4 +18,5 @@ class DatabaseService {
     
     
     let eventRef = Database.database().reference().child("users")
+    let userRef = Database.database().reference()
 }

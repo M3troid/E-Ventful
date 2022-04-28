@@ -35,7 +35,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             defaults.set(false, forKey: "isUserSignedIn")
             self.dismiss(animated: true, completion: nil)
         } catch let signOutError {
-            self.present(Service.createAlertController(title: "Error", message: signOutError.localizedDescription), animated: true, completion: nil)
+            self.present(UserAuthService.createAlertController(title: "Error", message: signOutError.localizedDescription), animated: true, completion: nil)
         }
     
         

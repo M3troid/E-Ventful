@@ -146,6 +146,20 @@ class ModifyEventViewController: UIViewController, UITableViewDataSource, UITabl
 
     //updates the event data at the  given event from the tableview.
     func updateEvent() {
+        if eventNameTxt.text!.isEmpty || fromDateTxt.text!.isEmpty || toDate.text!.isEmpty {
+            
+            let dialogMessage = UIAlertController(title: "Action Required", message: "One or more items need more information.", preferredStyle: .alert)
+            
+            // Create OK button with action handler
+            let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+                print("Ok button tapped")
+             })
+            
+            //Add OK button to a dialog message
+            dialogMessage.addAction(ok)
+            // Present Alert to
+            self.present(dialogMessage, animated: true, completion: nil)
+        } else {
         
         let eventName = eventNameTxt.text!
         let eventFromDate = fromDateTxt.text!
@@ -154,7 +168,7 @@ class ModifyEventViewController: UIViewController, UITableViewDataSource, UITabl
         let eventActivityTime = selectionTime
         let attendeeName = selectionName
         let attendeePhone = selectionNumber
-        let randomID = DatabaseService.shared.eventRef.child(userID!).child("Events").child(eventID)
+        let randomID = DatabaseService.shared.eventRef.child(userID!).child("Events").childByAutoId()
         let parameters = ["eventName": eventName,
                           "eventFromDate": eventFromDate,
                           "eventToDate": eventToDate,
@@ -164,7 +178,9 @@ class ModifyEventViewController: UIViewController, UITableViewDataSource, UITabl
                           "attendeePhone": attendeePhone,
                           "randomID": randomID.key!] as [String : Any]
         
-        DatabaseService.shared.eventRef.child(userID!).child("Events").child(eventID).setValue(parameters)
+        DatabaseService.shared.eventRef.child(userID!).child("Events").child(randomID.key!).setValue(parameters)
+        
+        
         
         eventNameTxt.text = "Event Name"
         toDate.text = ""
@@ -176,6 +192,7 @@ class ModifyEventViewController: UIViewController, UITableViewDataSource, UITabl
         
         self.tbl2_view.reloadData()
         self.tbl_view.reloadData()
+        }
         
     }
     //dissmisses the view if the button is exit pressed.

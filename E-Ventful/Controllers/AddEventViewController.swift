@@ -106,7 +106,23 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
 
     
     func addEvent() {
-        
+        if eventNameTxt.text!.isEmpty || fromDateTxt.text!.isEmpty || toDate.text!.isEmpty {
+            
+            let dialogMessage = UIAlertController(title: "Action Required", message: "One or more items need more information.", preferredStyle: .alert)
+            
+            // Create OK button with action handler
+            let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) -> Void in
+                print("Ok button tapped")
+             })
+            
+            //Add OK button to a dialog message
+            dialogMessage.addAction(ok)
+            // Present Alert to
+            self.present(dialogMessage, animated: true, completion: nil)
+            
+            
+
+        } else {
         
         let eventName = eventNameTxt.text!
         let eventFromDate = fromDateTxt.text!
@@ -139,7 +155,7 @@ class AddEventViewController: UIViewController, UITableViewDataSource, UITableVi
         
         self.tbl2_view.reloadData()
         self.tbl_view.reloadData()
-        
+        }
         
     }
     

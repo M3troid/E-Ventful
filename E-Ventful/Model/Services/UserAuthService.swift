@@ -9,9 +9,9 @@
 import UIKit
 import Firebase
 
-class Service {
+class UserAuthService {
     
-    static func signUpUser(email: String, password: String, name: String, onSuccess: @escaping () -> Void, onError: @escaping (_ error: Error?) -> Void) {
+    static func signUpUser(email: String, password: String, name: String, phone: String, onSuccess: @escaping () -> Void, onError: @escaping (_ error: Error?) -> Void) {
         let auth = Auth.auth()
         
         auth.createUser(withEmail: email, password: password) { (authResult, error) in
@@ -20,15 +20,22 @@ class Service {
                 return
             }
             
-            uploadToDatabase(email: email, name: name, onSuccess: onSuccess)
+            uploadToDatabase(email: email, name: name, phone: phone, onSuccess: onSuccess)
         }
     }
     
-    static func uploadToDatabase(email: String, name: String, onSuccess: @escaping () -> Void) {
+    static func updateUser(profileEmailTxt: String, onSuccess: @escaping ()-> Void, onError: @escaping (_ error: Error?) -> Void) {
+        let auth = Auth.auth()
+        
+        auth.currentUser?.updateEmail(to: profileEmailTxt)
+        
+    }
+    
+    static func uploadToDatabase(email: String, name: String, phone: String, onSuccess: @escaping () -> Void) {
         let ref = Database.database().reference()
         let uid = Auth.auth().currentUser?.uid
         
-        ref.child("users").child(uid!).setValue(["email" : email, "name" : name])
+        ref.child("users").child(uid!).setValue(["email" : email, "name" : name, "phone" : phone])
         onSuccess()
     }
     
@@ -45,13 +52,12 @@ class Service {
             if let dictionary = snapshot.value as? [String : Any] {
                 let email = dictionary["email"] as! String
                 let name = dictionary["name"] as! String
-                let eventName = dictionary["eventName"] as! String
-                let eventFromDate = dictionary["eventFromDate"] as! String
+                let phone = dictionary["phone"] as! String
                 
-                defaults.set(eventName, forKey: "eventName")
-                defaults.set(eventFromDate, forKey: "eventFromDate")
                 defaults.set(email, forKey: "userEmailKey")
                 defaults.set(name, forKey: "userNameKey")
+                defaults.set(phone, forKey: "userPhoneKey")
+                
                 
                 onSuccess()
             }

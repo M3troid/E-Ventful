@@ -17,7 +17,7 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
         
         auth.signIn(withEmail: email.text!, password: password.text!) { (authResult, error) in
             if error != nil {
-                self.present(Service.createAlertController(title: "Error", message: error!.localizedDescription), animated: true, completion: nil)
+                self.present(UserAuthService.createAlertController(title: "Error", message: error!.localizedDescription), animated: true, completion: nil)
                 return
             }
             
@@ -35,12 +35,4 @@ class LoginViewController: UIViewController {
             self.performSegue(withIdentifier: "userSignedInSegue", sender: nil)
         }
     }
-    
-    @IBAction func createAccountTapped(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "signUp")
-        vc.modalPresentationStyle = .overFullScreen
-        present(vc, animated: true)
-    }
-
 }
