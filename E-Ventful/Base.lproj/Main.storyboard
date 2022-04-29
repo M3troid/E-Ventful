@@ -172,15 +172,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" layoutMarginsFollowReadableWidth="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yOM-aH-fk4">
-                                <rect key="frame" x="183.33333333333334" y="519.66666666666663" width="61.666666666666657" height="28"/>
+                                <rect key="frame" x="173" y="509" width="83" height="28"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" button="YES" staticText="YES"/>
                                 </accessibility>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="28" id="9a3-Np-0je"/>
+                                    <constraint firstAttribute="width" secondItem="yOM-aH-fk4" secondAttribute="height" multiplier="75:28" constant="8" id="GWi-oz-1jq"/>
                                     <constraint firstAttribute="height" constant="28" id="ZD9-L4-Ibn"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="ZLv-om-raY"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="xIJ-CL-k4v"/>
                                 </constraints>
                                 <color key="tintColor" red="0.21960783" green="0.2823529541" blue="0.36078432199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="Button"/>
@@ -204,12 +203,12 @@
                         <color key="backgroundColor" red="0.60000002379999995" green="0.76862752440000004" blue="0.98039215800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8AL-SO-hfe" firstAttribute="top" secondItem="yOM-aH-fk4" secondAttribute="bottom" constant="30.333333333333371" id="0It-fe-A23"/>
+                            <constraint firstItem="8AL-SO-hfe" firstAttribute="top" secondItem="yOM-aH-fk4" secondAttribute="bottom" constant="41" id="0It-fe-A23"/>
                             <constraint firstItem="qJo-pq-evf" firstAttribute="leading" secondItem="eGW-eI-w6B" secondAttribute="leading" constant="170" id="8Gk-Qc-dxc"/>
                             <constraint firstItem="eGW-eI-w6B" firstAttribute="trailing" secondItem="8AL-SO-hfe" secondAttribute="trailing" constant="64" id="9MF-PA-lsi"/>
-                            <constraint firstItem="yOM-aH-fk4" firstAttribute="leading" secondItem="eGW-eI-w6B" secondAttribute="leading" constant="183.33000000000001" id="BJv-ef-X07"/>
+                            <constraint firstItem="yOM-aH-fk4" firstAttribute="leading" secondItem="eGW-eI-w6B" secondAttribute="leading" constant="173" id="BJv-ef-X07"/>
                             <constraint firstItem="lIA-kS-KC2" firstAttribute="top" secondItem="n7U-28-m1e" secondAttribute="bottom" constant="8" symbolic="YES" id="MM8-dz-q6X"/>
-                            <constraint firstItem="eGW-eI-w6B" firstAttribute="trailing" secondItem="yOM-aH-fk4" secondAttribute="trailing" constant="183" id="MhA-0c-4lJ"/>
+                            <constraint firstItem="eGW-eI-w6B" firstAttribute="trailing" secondItem="yOM-aH-fk4" secondAttribute="trailing" constant="172" id="MhA-0c-4lJ"/>
                             <constraint firstItem="eGW-eI-w6B" firstAttribute="trailing" secondItem="lIA-kS-KC2" secondAttribute="trailing" constant="137" id="OEO-1s-J7s"/>
                             <constraint firstItem="eGW-eI-w6B" firstAttribute="bottom" secondItem="8AL-SO-hfe" secondAttribute="bottom" constant="279" id="PnA-mK-n55"/>
                             <constraint firstItem="qJo-pq-evf" firstAttribute="top" secondItem="eGW-eI-w6B" secondAttribute="top" constant="230" id="Wry-FP-nTj"/>
@@ -218,7 +217,7 @@
                             <constraint firstItem="eGW-eI-w6B" firstAttribute="trailing" secondItem="n7U-28-m1e" secondAttribute="trailing" constant="137" id="d2G-Kf-0FM"/>
                             <constraint firstItem="eGW-eI-w6B" firstAttribute="trailing" secondItem="qJo-pq-evf" secondAttribute="trailing" constant="170" id="jCm-s0-gnh"/>
                             <constraint firstItem="n7U-28-m1e" firstAttribute="top" secondItem="qJo-pq-evf" secondAttribute="bottom" constant="51.329999999999998" id="k72-aG-DCr"/>
-                            <constraint firstItem="yOM-aH-fk4" firstAttribute="top" secondItem="lIA-kS-KC2" secondAttribute="bottom" constant="45.670000000000002" id="ktH-RW-F4n"/>
+                            <constraint firstItem="yOM-aH-fk4" firstAttribute="top" secondItem="lIA-kS-KC2" secondAttribute="bottom" constant="35" id="ktH-RW-F4n"/>
                             <constraint firstItem="n7U-28-m1e" firstAttribute="leading" secondItem="eGW-eI-w6B" secondAttribute="leading" constant="137" id="ry5-BB-lNe"/>
                         </constraints>
                     </view>
@@ -2040,7 +2039,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="c5A-cO-9R2"/>
+        <segue reference="sq1-FS-pQB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="person.fill" catalog="system" width="128" height="120"/>
