@@ -1,9 +1,4 @@
 //
-//  Service.swift
-//  SocialNetwork
-//
-//  Created by LzCtrl on 9/30/19.
-//  Copyright © 2019 M & P Construction, Inc. All rights reserved.
 //
 
 import UIKit
