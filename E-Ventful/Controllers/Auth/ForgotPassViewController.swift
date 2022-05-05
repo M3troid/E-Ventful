@@ -1,9 +1,4 @@
 //
-//  ForgotPassViewController.swift
-//  SocialNetwork
-//
-//  Created by Mikhail Lozovyy on 6/1/20.
-//  Copyright © 2020 M & P Construction, Inc. All rights reserved.
 //
 
 import UIKit
